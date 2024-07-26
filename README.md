@@ -1,2 +1,4 @@
 # snakeyaml-engine-kmp-benchmarks
-Benchmarks for snakeyaml-engine-kmp
+
+Performance benchmarks for snakeyaml-engine-kmp.
+See https://krzema12.github.io/snakeyaml-engine-kmp-benchmarks/dev/bench/
