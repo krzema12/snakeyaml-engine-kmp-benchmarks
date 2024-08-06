@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1722743902835,
+  "lastUpdate": 1722925705563,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -580,6 +580,72 @@ window.BENCHMARK_DATA = {
           {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 145.0998385714286,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "3110813+krzema12@users.noreply.github.com",
+            "name": "Piotr Krzemiński",
+            "username": "krzema12"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d745947909fe54d2802c06c70090f2b495fc1902",
+          "message": "Use Kotlin DSL for benchmark workflow (#221)\n\nUse\r\n[github-workflows-kt](https://github.com/typesafegithub/github-workflows-kt)\r\nto implement the workflow in Kotlin, increasing maintainability and\r\nreadability.\r\n\r\nNote: proper, type-safe matrix strategy support is yet to be\r\nimplemented, it's tracked in\r\nhttps://github.com/typesafegithub/github-workflows-kt/issues/368.\r\n\r\n# Testing done\r\n1. Compared what's logged in the \"Store benchmark result\" step as\r\n\"Data\", and there are no differences.\r\n* version from `main` branch:\r\nhttps://github.com/krzema12/snakeyaml-engine-kmp/actions/runs/10187305280/job/28181268567\r\n* version from this branch:\r\nhttps://github.com/krzema12/snakeyaml-engine-kmp/actions/runs/10244555647/job/28338076917?pr=221\r\n2. Compared with https://www.yamldiff.com/. Most important differences:\r\n* the new version has a consistency check which is required to ensure\r\nthat the YAML reflects what's described in Kotlin\r\n* the new version doesn't have the reports preprocessing step\r\nimplemented directly, and instead delegates it to the Kotlin script\r\nitself\r\n* instead of using step outputs or env vars (so effectively to not\r\nrepeat ourselves with the file paths), I just used Kotlin's constants\r\n* github-workflows-kt proactively adds step IDs to be able to refer to\r\nthem whenever needed\r\n\r\n![SemanticDiff](https://github.com/user-attachments/assets/d77eb0fc-9129-4121-92a7-e3bc822a1318)",
+          "timestamp": "2024-08-06T08:19:25+02:00",
+          "tree_id": "81f75f7d2cf84f2821ef9512f0d1424d6eb3b620",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/d745947909fe54d2802c06c70090f2b495fc1902"
+        },
+        "date": 1722925705340,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 211.845692198962,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 41.11249018688615,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 20.4551526961473,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 73.42454588909091,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 143.2543225,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 138.70800602666668,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 50.625066140776696,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
