@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1733141078477,
+  "lastUpdate": 1734264721170,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -3646,6 +3646,72 @@ window.BENCHMARK_DATA = {
           {
             "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 74.100188875,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "3110813+krzema12@users.noreply.github.com",
+            "name": "Piotr Krzemiński",
+            "username": "krzema12"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "06317b4c7f2743318c44f09b1bf03bc4b5405680",
+          "message": "ci: change how upstream project is tracked (#295)\n\nBefore this change, we simply stored a hash of the latest commit in\r\nsnakeyaml-engine that we ported over to snakeyaml-engine-kmp. The idea\r\nwas to port the changes one after another, assuming it would be easy.\r\nHowever, given our latest problems to port one of the commits\r\n(https://github.com/krzema12/snakeyaml-engine-kmp/pull/272) so that it\r\nworks on all targets, it's not good to block on this single change with\r\nporting other changes.\r\n\r\nOne idea would be to note with better granularity which commits have\r\nbeen ported. However, it would cost us quite a bit to add this\r\nmechanism, instead of focusing on actually porting the changes.\r\n\r\nThat's why I propose changing the semantics of the counter displayed in\r\nthe README: show how many changes weren't analyzed by us. In other\r\nwords, as soon as we acknowledge a given upstream change by creating a\r\nproper issue in our project, we can assume this change is \"analyzed\".\r\nThen, in our own pace, we can take care of porting the changes, possibly\r\ndoing it in parallel. Thanks to this approach, changes that are harder\r\nto port will naturally be ported later, and won't block porting easy\r\nchanges, which is good for the users of the lib.\r\n\r\nI've created these issues under a new label to track the changes to\r\nport:\r\nhttps://github.com/krzema12/snakeyaml-engine-kmp/issues?q=is%3Aissue+is%3Aopen+label%3A%22port+from+snakeyaml-engine%22\r\n\r\nYou can cross-reference it with\r\nhttps://raw.githubusercontent.com/krzema12/snakeyaml-engine-kmp/refs/heads/commits-to-upstream-badge/log-diff-between-repos.txt",
+          "timestamp": "2024-12-15T13:01:37+01:00",
+          "tree_id": "6a11349896f038b82402fc0be82946534178ba0d",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/06317b4c7f2743318c44f09b1bf03bc4b5405680"
+        },
+        "date": 1734264720987,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 113.9055422652174,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 30.972129504673585,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 13.056360239072273,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 176.46337572319325,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 76.50042481296296,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 158.57226484848485,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 39.51964458661417,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
