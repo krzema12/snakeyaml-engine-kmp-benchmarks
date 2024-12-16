@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1734357437696,
+  "lastUpdate": 1734389625828,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -3976,6 +3976,72 @@ window.BENCHMARK_DATA = {
           {
             "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 180.58262246206897,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6f08ac06f4e485de3d66e7c2c844d7bf13807235",
+          "message": "Update dependency gradle to v8.11.1 (#270)\n\nThis PR contains the following updates:\r\n\r\n| Package | Update | Change |\r\n|---|---|---|\r\n| [gradle](https://gradle.org)\r\n([source](https://redirect.github.com/gradle/gradle)) | minor | `8.10.2`\r\n-> `8.11.1` |\r\n\r\n---\r\n\r\n> [!WARNING]\r\n> Some dependencies could not be looked up. Check the Dependency\r\nDashboard for more information.\r\n\r\n---\r\n\r\n### Release Notes\r\n\r\n<details>\r\n<summary>gradle/gradle (gradle)</summary>\r\n\r\n###\r\n[`v8.11.1`](https://redirect.github.com/gradle/gradle/releases/tag/v8.11.1):\r\n8.11.1\r\n\r\n[Compare\r\nSource](https://redirect.github.com/gradle/gradle/compare/v8.11.0...v8.11.1)\r\n\r\nThis is a patch release for Gradle 8.11. We recommend users upgrade to\r\n8.11.1 instead of 8.11.\r\n\r\nIt fixes the following issues:\r\n\r\n-\r\n[#&#8203;31268](https://redirect.github.com/gradle/gradle/issues/31268)\r\nBuildEventsListenerRegistry corrupted with Isolated Projects and\r\nparallel configuration\r\n-\r\n[#&#8203;31282](https://redirect.github.com/gradle/gradle/issues/31282)\r\nRunning executables sporadically fails with ETXTBSY (Text file busy)\r\n-\r\n[#&#8203;31284](https://redirect.github.com/gradle/gradle/issues/31284)\r\nArrayIndexOutOfBoundsException after upgrading to gradle 8.11 when\r\ngenerating problems report\r\n-\r\n[#&#8203;31310](https://redirect.github.com/gradle/gradle/issues/31310)\r\nUnable to run Gradle task in 8.10 due to bytecode interception\r\n\r\n[Read the Release\r\nNotes](https://docs.gradle.org/8.11.1/release-notes.html)\r\n\r\n#### Upgrade instructions\r\n\r\nSwitch your build to use Gradle 8.11.1 by updating your wrapper:\r\n\r\n    ./gradlew wrapper --gradle-version=8.11.1\r\n\r\nSee the Gradle [8.x upgrade\r\nguide](https://docs.gradle.org/8.11.1/userguide/upgrading_version\\_8.html)\r\nto learn about deprecations, breaking changes and other considerations\r\nwhen upgrading.\r\n\r\nFor Java, Groovy, Kotlin and Android compatibility, see the [full\r\ncompatibility\r\nnotes](https://docs.gradle.org/8.11.1/userguide/compatibility.html).\r\n\r\n#### Reporting problems\r\n\r\nIf you find a problem with this release, please file a bug on [GitHub\r\nIssues](https://redirect.github.com/gradle/gradle/issues) adhering to\r\nour issue guidelines.\r\nIf you're not sure you're encountering a bug, please use the\r\n[forum](https://discuss.gradle.org/c/help-discuss).\r\n\r\nWe hope you will build happiness with Gradle, and we look forward to\r\nyour feedback via [Twitter](https://twitter.com/gradle) or on\r\n[GitHub](https://redirect.github.com/gradle).\r\n\r\n###\r\n[`v8.11`](https://redirect.github.com/gradle/gradle/releases/tag/v8.11.0):\r\n8.11\r\n\r\n[Compare\r\nSource](https://redirect.github.com/gradle/gradle/compare/v8.10.2...v8.11.0)\r\n\r\nThe Gradle team is excited to announce Gradle 8.11.\r\n\r\n[Read the Release\r\nNotes](https://docs.gradle.org/8.11/release-notes.html)\r\n\r\nWe would like to thank the following community members for their\r\ncontributions to this release of Gradle:\r\n[Adam](https://redirect.github.com/adam-enko),\r\n[alyssoncs](https://redirect.github.com/alyssoncs),\r\n[Bilel MEDIMEGH](https://redirect.github.com/LelouBil),\r\n[Björn Kautler](https://redirect.github.com/Vampire),\r\n[Chuck Thomas](https://redirect.github.com/chuckthemole),\r\n[Daniel Lacasse](https://redirect.github.com/lacasseio),\r\n[Finn Petersen](https://redirect.github.com/fp7),\r\n[JK](https://redirect.github.com/jknair0),\r\n[Jérémie Bresson](https://redirect.github.com/jmini),\r\n[luozexuan](https://redirect.github.com/luozexuan),\r\n[Mahdi Hosseinzadeh](https://redirect.github.com/mahozad),\r\n[Markus Gaisbauer](https://redirect.github.com/quijote),\r\n[Matthew Haughton](https://redirect.github.com/3flex),\r\n[Matthew Von-Maszewski](https://redirect.github.com/matthewvon),\r\n[ploober](https://redirect.github.com/ploober),\r\n[Siarhei](https://redirect.github.com/madhead),\r\n[Titus James](https://redirect.github.com/tj330),\r\n[vrp0211](https://redirect.github.com/vrp0211)\r\n\r\n#### Upgrade instructions\r\n\r\nSwitch your build to use Gradle 8.11 by updating your wrapper:\r\n\r\n    ./gradlew wrapper --gradle-version=8.11\r\n\r\nSee the Gradle [8.x upgrade\r\nguide](https://docs.gradle.org/8.11/userguide/upgrading_version\\_8.html)\r\nto learn about deprecations, breaking changes and other considerations\r\nwhen upgrading.\r\n\r\nFor Java, Groovy, Kotlin and Android compatibility, see the [full\r\ncompatibility\r\nnotes](https://docs.gradle.org/8.11/userguide/compatibility.html).\r\n\r\n#### Reporting problems\r\n\r\nIf you find a problem with this release, please file a bug on [GitHub\r\nIssues](https://redirect.github.com/gradle/gradle/issues) adhering to\r\nour issue guidelines.\r\nIf you're not sure you're encountering a bug, please use the\r\n[forum](https://discuss.gradle.org/c/help-discuss).\r\n\r\nWe hope you will build happiness with Gradle, and we look forward to\r\nyour feedback via [Twitter](https://twitter.com/gradle) or on\r\n[GitHub](https://redirect.github.com/gradle).\r\n\r\n</details>\r\n\r\n---\r\n\r\n### Configuration\r\n\r\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\r\nAutomerge - At any time (no schedule defined).\r\n\r\n🚦 **Automerge**: Enabled.\r\n\r\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\r\nrebase/retry checkbox.\r\n\r\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\r\nagain.\r\n\r\n---\r\n\r\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\r\nthis box\r\n\r\n---\r\n\r\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\r\nView the [repository job\r\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\r\n\r\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS45LjUiLCJ1cGRhdGVkSW5WZXIiOiIzOS41OC4xIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\r\n\r\n---------\r\n\r\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>\r\nCo-authored-by: Piotr Krzeminski <git@krzeminski.it>",
+          "timestamp": "2024-12-16T22:40:24Z",
+          "tree_id": "ba5a4630a986c35caff705ad7b67944554e071b9",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/6f08ac06f4e485de3d66e7c2c844d7bf13807235"
+        },
+        "date": 1734389625364,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 33.2672021804772,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.462732977561155,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 201.76608317160998,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 77.61279402,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 150.5221988235294,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 40.829364093495926,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 151.54732760000002,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
