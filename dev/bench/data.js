@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1735563889857,
+  "lastUpdate": 1735568702691,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -4876,6 +4876,102 @@ window.BENCHMARK_DATA = {
           {
             "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 86.33192865714287,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "3110813+krzema12@users.noreply.github.com",
+            "name": "Piotr Krzemiński",
+            "username": "krzema12"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "4b150bad74ca5a718343bb9ab05c23fa2a6271ea",
+          "message": "Allow accessing test resources from common source set (#312)\n\nIt's a really minimal version of a little two-part util to access test\r\nresources from tests in `commonTest` source set, via putting them into a\r\nKotlin file that is later compiled and attached to the test bundle.\r\nThanks to this, we can port new changes in snakeyaml-engine and port\r\nJVM-specific tests to the common source set without putting the YAML\r\nfiles as multiline strings in the test Kotlin files.\r\n\r\nThere's https://github.com/goncalossilva/kotlinx-resources but it\r\ndoesn't support Wasm\r\n(https://github.com/goncalossilva/kotlinx-resources/issues/91).\r\n\r\nWe use a similar approach already for YAML test suite, here:\r\nhttps://github.com/krzema12/snakeyaml-engine-kmp/blob/53e5c77393d501bbb835264a3f55385ccec91cda/buildSrc/src/main/kotlin/buildsrc/tasks/GenerateYamlTestSuiteData.kt.\r\nIn the future, we could probably use a single mechanism to access a\r\ncertain group of files from the common source set's tests.\r\n\r\nOther remarks:\r\n* I think there are more stringified resources in the code base - once\r\nthis PR is merged, I'm going to put them back in YAML files\r\n* if the resource doesn't exist, it fails with an NPE somewhere in the\r\nmiddle - I'm going to tackle it one day, it's not obvious because of\r\n`fold`\r\n* performance-wise (lots of files/large files), I haven't tested it yet.\r\nIt's supposed to work for a small scale we have now\r\n* if it grows and matures, I'm planning to extract it to a separate\r\nlibrary or perhaps contribute to\r\nhttps://github.com/goncalossilva/kotlinx-resources",
+          "timestamp": "2024-12-30T15:09:12+01:00",
+          "tree_id": "d8202bbb5149362572d6e9ef0881ce83c31de60a",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/4b150bad74ca5a718343bb9ab05c23fa2a6271ea"
+        },
+        "date": 1735568702155,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 90.46221224400395,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 18.385074894516688,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 33.69975475269535,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.515709651742267,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 124.75621745560379,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 189.69624093230772,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 59.5968362142782,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 82.83430489166666,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 91.02469718919886,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 118.29128166590911,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 22.360823791541126,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 40.0032992515625,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
