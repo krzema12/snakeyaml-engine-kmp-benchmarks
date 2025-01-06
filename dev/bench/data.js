@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1736094638937,
+  "lastUpdate": 1736184552291,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -6485,6 +6485,102 @@ window.BENCHMARK_DATA = {
             "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 33.18155324493671,
             "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f9c093398fe0ae732ac6863e0d0bf737d191ad4e",
+          "message": "Update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.8.0 (#334)\n\nThis PR contains the following updates:\n\n| Package | Change | Age | Adoption | Passing | Confidence |\n|---|---|---|---|---|---|\n|\n[org.jetbrains.kotlinx:kotlinx-serialization-json](https://redirect.github.com/Kotlin/kotlinx.serialization)\n| `1.7.3` -> `1.8.0` |\n[![age](https://developer.mend.io/api/mc/badges/age/maven/org.jetbrains.kotlinx:kotlinx-serialization-json/1.8.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![adoption](https://developer.mend.io/api/mc/badges/adoption/maven/org.jetbrains.kotlinx:kotlinx-serialization-json/1.8.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![passing](https://developer.mend.io/api/mc/badges/compatibility/maven/org.jetbrains.kotlinx:kotlinx-serialization-json/1.7.3/1.8.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/org.jetbrains.kotlinx:kotlinx-serialization-json/1.7.3/1.8.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency\nDashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>Kotlin/kotlinx.serialization\n(org.jetbrains.kotlinx:kotlinx-serialization-json)</summary>\n\n###\n[`v1.8.0`](https://redirect.github.com/Kotlin/kotlinx.serialization/blob/HEAD/CHANGELOG.md#180-RC--2024-13-10)\n\n\\==================\n\nThis is a release candidate for the next version. It is based on Kotlin\n2.1.0 and includes a few new features, as well\nas bugfixes and improvements:\n\n#### `@JsonIgnoreUnknownKeys` annotation\n\nPreviously, only global setting `JsonBuilder.ignoreUnknownKeys`\ncontrolled whether Json parser would throw exception if\ninput contained a property that was not declared in a `@Serializable`\nclass.\nThere were [a lot of\ncomplaints](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/1420)\nthat this setting is not\nflexible enough.\nTo address them, we added new `@JsonIgnoreUnknownKeys` annotation that\ncan be applied on a per-class basis.\nWith this annotation, it is possible to allow unknown properties for\nannotated classes, while\ngeneral decoding methods (such as `Json.decodeFromString` and others)\nwould still reject them for everything else.\nSee details in the corresponding\n[PR](https://redirect.github.com/Kotlin/kotlinx.serialization/pull/2874).\n\n#### Stabilization of `SerialDescriptor` API and\n`@SealedSerializationApi` annotation\n\n`SerialDescriptor`, `SerialKind`, and related API has been around for a\nlong time and has proven itself useful.\nThe main reason `@ExperimentalSerializationApi` was on\nSerialDescriptor's properties is that we wanted to discourage\npeople from subclassing it.\nFortunately, Kotlin 2.1 provides a special mechanism for such a\ncase —\n[SubclassOptInRequired](https://kotlinlang.org/docs/opt-in-requirements.html#opt-in-to-inherit-from-a-class-or-interface).\nNew `kotlinx.serialization.SealedSerializationApi` annotation designates\nAPIs\nas public for use, but closed for implementation — the case for\nSerialDescriptor, which is a non-sealed interface for\ntechnical reasons.\nNow you can use most of `SerialDescriptor` and its builders API without\nthe need to opt-in into experimental\nserialization API.\nSee the\n[PR](https://redirect.github.com/Kotlin/kotlinx.serialization/pull/2827)\nfor more details.\n\n*Note*: All `SerialKind`s are stable API now, except `PolymorphicKind` —\nwe may want to expand it in the future.\n\n#### Generate Java 8's default method implementations in interfaces\n\n**TL;DR This change ensures better binary compatibility in the future\nfor library. You should not experience any\ndifference from it.**\n\nkotlinx.serialization library contains a lot of interfaces with default\nmethod implementations. Historically, Kotlin\ncompiled a synthetic `DefaultImpls` class for them.\n[Starting from Kotlin\n1.4](https://blog.jetbrains.com/kotlin/2020/07/kotlin-1-4-m3-generating-default-methods-in-interfaces/),\nit was possible to compile them using as Java 8's `default` methods to\nensure\nthat new methods can still be added to interfaces without the need for\nimplementors to recompile.\nTo preserve binary compatibility with existing clients, a special\n`all-compatbility` mode is supported in compiler\nto generate both `default` methods and synthetic `DefaultImpls` class.\n\nNow, kotlinx.serialization finally makes use of this `all-compatibility`\nmode,\nwhich potentially allows us to add new methods to interfaces such as\n`SerialDescriptor`, `Encoder`, `Decoder`, etc.,\nwithout breaking existing clients. This change is expected to have no\neffect on existing clients, and no action from\nyour side is required.\nNote that Kotlin 2.2 plans to enable `all-compatibility`\nmode [by default](https://youtrack.jetbrains.com/issue/KTLC-269).\n\n#### Other bugfixes and improvements\n\n- Correctly skip structures with Cbor.ignoreUnknownKeys setting\n([#&#8203;2873](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2873))\n- Handle missing system property without NPE\n([#&#8203;2867](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2867))\n- Fixed keeping INSTANCE field and serializer function for serializable\nobjects in R8 full mode\n([#&#8203;2865](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2865))\n- Correctly parse invalid numbers in JsonLiteral.long and other\nextensions\n([#&#8203;2852](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2852))\n- Correctly handle serial name conflict for different classes in\nSerializersModule.overwriteWith\n([#&#8203;2856](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2856))\n- Add inline reified version of encodeToString as a Json member to\nstreamline the experience for newcomers.\n([#&#8203;2853](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2853))\n- Do not check kind or discriminator collisions for subclasses'\npolymorphic serializers if Json.classDiscriminatorMode\nis set to NONE\n([#&#8203;2833](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2833))\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\nAutomerge - At any time (no schedule defined).\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS44NS4wIiwidXBkYXRlZEluVmVyIjoiMzkuODUuMCIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2025-01-06T17:13:50Z",
+          "tree_id": "85b584d513a015c52153fb9bd7334e47e6798c8e",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/f9c093398fe0ae732ac6863e0d0bf737d191ad4e"
+        },
+        "date": 1736184552066,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 26.327513273885067,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 34.0110724055944,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 55.697519886529314,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 87.26484693050848,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 21.240350463694323,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 26.792952621843163,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 18.650275527290365,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 143.90063125862054,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 133.30659731517858,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 39.51922362733136,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 47.25456145277778,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 67.32877913772488,
+            "unit": "us/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
