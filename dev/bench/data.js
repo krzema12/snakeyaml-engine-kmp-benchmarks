@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1736502416706,
+  "lastUpdate": 1736527111564,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -7656,6 +7656,102 @@ window.BENCHMARK_DATA = {
             "value": 31.428563496319015,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "3110813+krzema12@users.noreply.github.com",
+            "name": "Piotr Krzemiński",
+            "username": "krzema12"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "af72b6392a10057bf4c4d8f5ea560cbe4313b787",
+          "message": "Allow larger common test resources (#355)\n\nPart of https://github.com/krzema12/snakeyaml-engine-kmp/issues/354\n\nBefore this change, the build logic took all test resources, and\nconverted them into Kotlin code that was building a map using a single\nexpression with using nested `mapOf` function to represent the directory\nstructure. However, when trying to move existing JVM-specific resources\n(there's a lot of them), one could see a failing build with:\n\n```\nexception: java.lang.RuntimeException: Error generating class file CommonTestResources.class (compiled from [/Users/piotr/repos/snakeyaml-engine-kmp/build/generated-code-for-resources/src/commonTest/kotlin/CommonTestResources.kt]): Method too large: CommonTestResources.<clinit> ()V\ne\n```\n\nThis change puts every call to `mapOf(...)` or `ByteString.of(...)` into\na separate method, so that now the limitation is either the maximum\nnumber of files/directories in a given directory, or size of a single\nfile. It should unblock migrating tests to the common source set that\nrely on the large number of files (see a work-in-progress PR:\nhttps://github.com/krzema12/snakeyaml-engine-kmp/pull/356).\n\nIt was still faster to not use KotlinPoet, but the generated code became\neven more ugly. It's likely that I'm going to use KotlinPoet, especially\nthat I'm planning to extract this functionality into a library.",
+          "timestamp": "2025-01-10T17:24:00+01:00",
+          "tree_id": "199a54f4ce4efc0b3d688e9be6e51fae22b4a6be",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/af72b6392a10057bf4c4d8f5ea560cbe4313b787"
+        },
+        "date": 1736527111379,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 19.374494448681567,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 30.835015806875,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 103.91108863004827,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 183.16095162142858,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 69.54278696498054,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 35.28077960706317,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 48.708347386597936,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 156.4712822498888,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 127.26182408301888,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 22.677677735071207,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 26.060029052909705,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 15.435999385239228,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
           }
         ]
       }
