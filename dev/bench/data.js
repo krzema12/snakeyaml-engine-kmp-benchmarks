@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1736527111564,
+  "lastUpdate": 1736774435640,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -7752,6 +7752,102 @@ window.BENCHMARK_DATA = {
             "value": 15.435999385239228,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c19d7a52793d43fb3cb2b891b2138f059d32d0fd",
+          "message": "chore(deps): update dependency io.github.typesafegithub:github-workflows-kt to v3.1.0 (#357)\n\nThis PR contains the following updates:\n\n| Package | Change | Age | Adoption | Passing | Confidence |\n|---|---|---|---|---|---|\n|\n[io.github.typesafegithub:github-workflows-kt](https://redirect.github.com/typesafegithub/github-workflows-kt)\n| `3.0.2` -> `3.1.0` |\n[![age](https://developer.mend.io/api/mc/badges/age/maven/io.github.typesafegithub:github-workflows-kt/3.1.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![adoption](https://developer.mend.io/api/mc/badges/adoption/maven/io.github.typesafegithub:github-workflows-kt/3.1.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![passing](https://developer.mend.io/api/mc/badges/compatibility/maven/io.github.typesafegithub:github-workflows-kt/3.0.2/3.1.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.github.typesafegithub:github-workflows-kt/3.0.2/3.1.0?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency\nDashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>typesafegithub/github-workflows-kt\n(io.github.typesafegithub:github-workflows-kt)</summary>\n\n###\n[`v3.1.0`](https://redirect.github.com/typesafegithub/github-workflows-kt/releases/tag/v3.1.0):\n3.1.0\n\n[Compare\nSource](https://redirect.github.com/typesafegithub/github-workflows-kt/compare/v3.0.2...v3.1.0)\n\n#### :star: Features\n\n- [allow fallback to local bindings server in consistency check\njob](https://redirect.github.com/typesafegithub/github-workflows-kt/commit/984db40579b6be08b4030a5b05e8b7f1347a373d)\n- [add prefixes to step names for fallback\npath](https://redirect.github.com/typesafegithub/github-workflows-kt/commit/df2da7667e120f06cbb8caeff8985ad5494a489d)\n\nThis release focuses on adding a way to mitigate the binding server's\navailability issues, if they ever reoccur. This opt-in feature can be\nused in the following way:\n\n```kotlin\nconsistencyCheckJobConfig = DEFAULT_CONSISTENCY_CHECK_JOB_CONFIG.copy(\n    useLocalBindingsServerAsFallback = true,\n),\n```\n\nwhich will result in adding an alternative path to your consistency\ncheck jobs that will be triggered if the original consistency check\nfails on compiling the script. Enabling this option costs you nothing in\nterms of extra CI time, if the server is up. If the server is down, it's\nusually an extra half a minute to up the server and rerun the workflow\nscript.\n\nExample: <img width=\"1087\" alt=\"Screenshot 2025-01-13 at 10 09 49\"\nsrc=\"https://github.com/user-attachments/assets/4fa44fc9-5eff-4b5b-b350-4613ef48515c\"\n/>\n\n#### :hammer_and_wrench: Fixes\n\nNone.\n\n#### :bomb: Breaking changes\n\nNone.\n\n#### :package: Dependencies\n\n- [update dependency it.krzeminski:snakeyaml-engine-kmp to\nv3.1.0](https://redirect.github.com/typesafegithub/github-workflows-kt/commit/b300eaf468b9fc03e923d7836a4dd673304a6bc5)\n- [update dependency org.jetbrains.kotlinx:kotlinx-serialization-core to\nv1.8.0](https://redirect.github.com/typesafegithub/github-workflows-kt/commit/97855d8d17b0c65f3c03c15f5f86c51d1b5c1ba2)\n- [update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to\nv1.8.0](https://redirect.github.com/typesafegithub/github-workflows-kt/commit/dced05ec2ec62b8a7eaa02f438967ef8dec59f6c)\n\n***\n\nThe above release notes include customer-facing changes.\nIf you're interested also in internal changes, please see the full\nchange log:\nhttps://github.com/typesafegithub/github-workflows-kt/compare/v3.0.2...v3.1.0\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\nAutomerge - At any time (no schedule defined).\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiIzOS45Mi4wIiwidXBkYXRlZEluVmVyIjoiMzkuOTIuMCIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2025-01-13T13:09:59Z",
+          "tree_id": "a5f0999e3cac1a3bc5304c3c676ec3fb1a0fdb83",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/c19d7a52793d43fb3cb2b891b2138f059d32d0fd"
+        },
+        "date": 1736774435087,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 50.387539689925504,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 54.67242736966292,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 149.8617093722666,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 128.31809949912912,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 22.329671260524556,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 25.61429159292217,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 16.991327887374318,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 65.11666072138888,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 20.190439614243324,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 37.233970803496504,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 82.39652974963647,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 149.33577405681817,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
       }
