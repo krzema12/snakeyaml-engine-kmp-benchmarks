@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739373863698,
+  "lastUpdate": 1739444441489,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -12196,6 +12196,108 @@ window.BENCHMARK_DATA = {
           {
             "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 51.841532358762876,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "Bjoern@Kautler.net",
+            "name": "Björn Kautler",
+            "username": "Vampire"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "ac01468f2eda19c65ad6f2c1d4701431e85878e1",
+          "message": "Use Core Schema by default as recommended by the YAML specification (#390)",
+          "timestamp": "2025-02-13T11:49:10+01:00",
+          "tree_id": "7fc7a6268929de24117fca3c153db1d672465055",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/ac01468f2eda19c65ad6f2c1d4701431e85878e1"
+        },
+        "date": 1739444440864,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 68.40145881494098,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 95.48562735849056,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 23.813768003675982,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 24.693728868772066,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 17.494748496224755,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 152.37604775005587,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 133.2820045432742,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 46.23052229148375,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 50.33812766595745,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 61.910833907210744,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 100.43841786153847,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 20.303613813569836,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 32.71668706405228,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
