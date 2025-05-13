@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1745623223542,
+  "lastUpdate": 1747147153593,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -14224,6 +14224,108 @@ window.BENCHMARK_DATA = {
           {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 91.87629127272727,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "d658c1c1428ee552a224a5f3e4c8f3d59d8c17da",
+          "message": "fix(deps): update kotlin monorepo to v2.1.21 (#437)\n\nThis PR contains the following updates:\n\n| Package | Change | Age | Adoption | Passing | Confidence |\n|---|---|---|---|---|---|\n| [org.jetbrains.kotlin:kotlin-gradle-plugin](https://kotlinlang.org/)\n([source](https://redirect.github.com/JetBrains/kotlin)) | `2.1.20` ->\n`2.1.21` |\n[![age](https://developer.mend.io/api/mc/badges/age/maven/org.jetbrains.kotlin:kotlin-gradle-plugin/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![adoption](https://developer.mend.io/api/mc/badges/adoption/maven/org.jetbrains.kotlin:kotlin-gradle-plugin/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![passing](https://developer.mend.io/api/mc/badges/compatibility/maven/org.jetbrains.kotlin:kotlin-gradle-plugin/2.1.20/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/org.jetbrains.kotlin:kotlin-gradle-plugin/2.1.20/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n| [org.jetbrains.kotlin.plugin.allopen](https://kotlinlang.org/)\n([source](https://redirect.github.com/JetBrains/kotlin)) | `2.1.20` ->\n`2.1.21` |\n[![age](https://developer.mend.io/api/mc/badges/age/maven/org.jetbrains.kotlin.plugin.allopen:org.jetbrains.kotlin.plugin.allopen.gradle.plugin/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![adoption](https://developer.mend.io/api/mc/badges/adoption/maven/org.jetbrains.kotlin.plugin.allopen:org.jetbrains.kotlin.plugin.allopen.gradle.plugin/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![passing](https://developer.mend.io/api/mc/badges/compatibility/maven/org.jetbrains.kotlin.plugin.allopen:org.jetbrains.kotlin.plugin.allopen.gradle.plugin/2.1.20/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n[![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/org.jetbrains.kotlin.plugin.allopen:org.jetbrains.kotlin.plugin.allopen.gradle.plugin/2.1.20/2.1.21?slim=true)](https://docs.renovatebot.com/merge-confidence/)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency\nDashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>JetBrains/kotlin\n(org.jetbrains.kotlin:kotlin-gradle-plugin)</summary>\n\n###\n[`v2.1.21`](https://redirect.github.com/JetBrains/kotlin/releases/tag/v2.1.21):\nKotlin 2.1.21\n\n##### Changelog\n\n##### Backend. Native. Debug\n\n- [`KT-75991`](https://youtrack.jetbrains.com/issue/KT-75991) Xcode\n16.3: Fix lldb stepping test over an inline function\n\n##### Compiler\n\n- [`KT-75992`](https://youtrack.jetbrains.com/issue/KT-75992) Xcode\n16.3: stacktraces on simulators are not symbolicated\n- [`KT-76663`](https://youtrack.jetbrains.com/issue/KT-76663) KJS:\nKotlinNothingValueException caused by expression return since 2.1.20\n- [`KT-75756`](https://youtrack.jetbrains.com/issue/KT-75756) Backend\nInternal error: Exception during IR lowering when trying to access\nvariable from providedProperties in class within kotlin custom script\n- [`KT-76209`](https://youtrack.jetbrains.com/issue/KT-76209)\nCONFLICTING_UPPER_BOUNDS on `Nothing` bound\n- [`KT-70352`](https://youtrack.jetbrains.com/issue/KT-70352) K2:\nFalse-negative CONFLICTING_UPPER_BOUNDS on `Nothing` bound\n- [`KT-74739`](https://youtrack.jetbrains.com/issue/KT-74739) Native:\n\"IllegalArgumentException: All constructors should've been lowered:\nFUNCTION_REFERENCE\"\n- [`KT-75483`](https://youtrack.jetbrains.com/issue/KT-75483) Native:\nredundant unboxing generated with smart cast\n- [`KT-71425`](https://youtrack.jetbrains.com/issue/KT-71425) IR\nInliner: investigate return type of an inlined block\n\n##### Native\n\n- [`KT-76252`](https://youtrack.jetbrains.com/issue/KT-76252) Native:\nexecutable crash with generic value classes with 2.1.20\n\n##### Native. C and ObjC Import\n\n- [`KT-75781`](https://youtrack.jetbrains.com/issue/KT-75781) Xcode\n16.3: Fix cinterop tests failing with fatal error: could not build\nmodule '\\_stdint'\n\n##### Native. Runtime. Memory\n\n- [`KT-74280`](https://youtrack.jetbrains.com/issue/KT-74280) Native:\nGC.collect crashes with -Xallocator=std\n\n##### Tools. CLI\n\n- [`KT-75588`](https://youtrack.jetbrains.com/issue/KT-75588)\n\\[2.1.20-RC] \"was compiled by a pre-release version of Kotlin and cannot\nbe loaded by this version of the compiler\" warnings despite using the\nsame compiler version\n- [`KT-74663`](https://youtrack.jetbrains.com/issue/KT-74663) kotlinc-js\nCLI: not providing -ir-output-dir results in NullPointerException\n\n##### Tools. Compiler Plugins\n\n- [`KT-76162`](https://youtrack.jetbrains.com/issue/KT-76162)\n\"IllegalStateException: No mapping for symbol: VALUE_PARAMETER\nINSTANCE_RECEIVER\" after updating to 2.1.20\n\n##### Tools. Gradle\n\n- [`KT-73682`](https://youtrack.jetbrains.com/issue/KT-73682)\nCompatibility with Gradle 8.12 release\n- [`KT-73142`](https://youtrack.jetbrains.com/issue/KT-73142) Kotlin\nGradle plugin: Remove usage of Gradle's internal ExecHandleBuilder\n- [`KT-36004`](https://youtrack.jetbrains.com/issue/KT-36004) Update\n'org.gradle.usage' attribute rules to support the 'JAVA_API' and\n'JAVA_RUNTIME' value\n- [`KT-73968`](https://youtrack.jetbrains.com/issue/KT-73968)\nKotlinDependencyManagement tries to mutate configuration after it was\nresolved\n- [`KT-73684`](https://youtrack.jetbrains.com/issue/KT-73684) Run\nintegration tests against Gradle 8.12\n- [`KT-72694`](https://youtrack.jetbrains.com/issue/KT-72694) Accessing\nTask.project during execution is being deprecated in Gradle 8.12\n- [`KT-73683`](https://youtrack.jetbrains.com/issue/KT-73683) Compile\nagainst Gradle API 8.12\n\n##### Tools. Gradle. JS\n\n- [`KT-77119`](https://youtrack.jetbrains.com/issue/KT-77119) KJS:\nGradle: Setting custom environment variables in KotlinJsTest tasks no\nlonger works\n- [`KT-74735`](https://youtrack.jetbrains.com/issue/KT-74735) KGP uses\nGradle internal `CompositeProjectComponentArtifactMetadata`\n- [`KT-71879`](https://youtrack.jetbrains.com/issue/KT-71879) Notice of\nupcoming deprecation for Boolean 'is-' properties in Gradle Groovy\nscripts\n\n##### Tools. Gradle. Multiplatform\n\n- [`KT-75808`](https://youtrack.jetbrains.com/issue/KT-75808) KGP: MPP\nwith jvm target and Gradle java-test-fixtures is broken\n- [`KT-75605`](https://youtrack.jetbrains.com/issue/KT-75605) Dependency\nresolution fails in commonTest/nativeTest source sets for KMP module\nwhen depending on another project due to missing PSM\n- [`KT-75512`](https://youtrack.jetbrains.com/issue/KT-75512)\nMaven-publish: ArtifactId is not correct in`pom` file with customized\n`withXml`\n\n##### Tools. Incremental Compile\n\n- [`KT-62555`](https://youtrack.jetbrains.com/issue/KT-62555) Wrong ABI\nfingerprint for inline function containing a lambda\n- [`KT-75883`](https://youtrack.jetbrains.com/issue/KT-75883) Follow-up:\nswitch from INSTANCE heuristic to outerClass chain\n\n##### Tools. Kapt\n\n- [`KT-75936`](https://youtrack.jetbrains.com/issue/KT-75936) K2 KAPT:\nunsupported FIR element kinds in constant evaluation\n- [`KT-75942`](https://youtrack.jetbrains.com/issue/KT-75942) K2 KAPT:\nunderscore not allowed here\n\n##### Tools. Scripts\n\n- [`KT-76424`](https://youtrack.jetbrains.com/issue/KT-76424)\nDependencies in main.kts not working with 2.1.20\n- [`KT-76296`](https://youtrack.jetbrains.com/issue/KT-76296) Kotlin\nscript compiler crashes when secondary constructor calls a function\n- [`KT-75589`](https://youtrack.jetbrains.com/issue/KT-75589) Scripts:\n\"IndexOutOfBoundsException in\njdk.internal.util.Preconditions.outOfBounds\" when trying to extend a\nclass which uses global variable\n\n##### Tools. Wasm\n\n- [`KT-76161`](https://youtrack.jetbrains.com/issue/KT-76161) Wasm:\n\"export startUnitTests was not found\" after updating to Kotlin 2.1.20\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\nAutomerge - At any time (no schedule defined).\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0MC4xMS45IiwidXBkYXRlZEluVmVyIjoiNDAuMTEuOSIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2025-05-13T14:24:40Z",
+          "tree_id": "2c81ea9e6c4046ffed2b6fa6e14b05eb8dcd52e6",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/d658c1c1428ee552a224a5f3e4c8f3d59d8c17da"
+        },
+        "date": 1747147153245,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 21.93154509995867,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 35.600582120149255,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 68.65078728131235,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 122.6939565631579,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 71.22741548326688,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 107.33226666666664,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 152.97166220292655,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 134.4121036311739,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 23.50314874082799,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 24.80392131258143,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 15.720212169626667,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 36.91205079565385,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 50.38231462446809,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
