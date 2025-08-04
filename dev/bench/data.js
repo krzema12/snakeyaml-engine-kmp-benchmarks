@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1754120215677,
+  "lastUpdate": 1754296076908,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -17158,6 +17158,108 @@ window.BENCHMARK_DATA = {
           {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 98.7488931372549,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "3110813+krzema12@users.noreply.github.com",
+            "name": "Piotr Krzemiński",
+            "username": "krzema12"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e59096add1aa2da5ff7cfe2c720518cfc6f71258",
+          "message": "Use Java 11 for compiling and running tests (#489)\n\nThanks to this, we keep providing the lib for projects that are still on\nJava 8, and we can use newest kotest which requires at least Java\n11-equivalent bytecode.\n\nSee the discussion in\nhttps://github.com/krzema12/snakeyaml-engine-kmp/pull/485 and\nhttps://kotlinlang.slack.com/archives/CT0G9SD7Z/p1754028241224579?thread_ts=1754028241.224579&cid=CT0G9SD7Z.\n\n# Testing\n\nFor tests, checked in\nhttps://github.com/krzema12/snakeyaml-engine-kmp/pull/400 that running\nwith kotest 6.0.0.M9 that requires Java 11 works fine.\n\nTo ensure that the release will still be compatible with Java 8, tested\nby inspecting the snapshot's JAR (I temporarily enabled publishing\nsnapshots from this branch, see\nhttps://central.sonatype.com/repository/maven-snapshots/it/krzeminski/snakeyaml-engine-kmp-jvm/3.1.2-SNAPSHOT/snakeyaml-engine-kmp-jvm-3.1.2-20250803.193827-16.jar):\n\n```\n> jar xf snakeyaml-engine-kmp-jvm-3.1.2-20250803.193827-16.jar\n> file it/krzeminski/snakeyaml/engine/kmp/api/YamlUnicodeReader.class\nit/krzeminski/snakeyaml/engine/kmp/api/YamlUnicodeReader.class: compiled Java class data, version 52.0 (Java 1.8)\n```",
+          "timestamp": "2025-08-04T10:14:57+02:00",
+          "tree_id": "0e4750a24c303f5386b004b856ac4ac5811071c8",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/e59096add1aa2da5ff7cfe2c720518cfc6f71258"
+        },
+        "date": 1754296076409,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 122.39941998431213,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 163.7836430475,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 69.79453359178572,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 107.29765734693876,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 26.48268092667729,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 53.7992253945946,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 149.35010795927715,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 129.87886170961536,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 24.52542286988373,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 27.500626330754915,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 16.735057431590747,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 42.090686200362754,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 51.29808122282609,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
