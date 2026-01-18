@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768571111573,
+  "lastUpdate": 1768776427601,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -28000,6 +28000,96 @@ window.BENCHMARK_DATA = {
           {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 107.24385695652174,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "41dcb911efaeb7cc49733a0521e003303d76b088",
+          "message": "Update dependency com.vanniktech.maven.publish:com.vanniktech.maven.publish.gradle.plugin to v0.36.0 (#641)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[com.vanniktech.maven.publish:com.vanniktech.maven.publish.gradle.plugin](https://redirect.github.com/vanniktech/gradle-maven-publish-plugin)\n| `0.35.0` → `0.36.0` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/com.vanniktech.maven.publish:com.vanniktech.maven.publish.gradle.plugin/0.36.0?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/com.vanniktech.maven.publish:com.vanniktech.maven.publish.gradle.plugin/0.35.0/0.36.0?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency\nDashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>vanniktech/gradle-maven-publish-plugin\n(com.vanniktech.maven.publish:com.vanniktech.maven.publish.gradle.plugin)</summary>\n\n###\n[`v0.36.0`](https://redirect.github.com/vanniktech/gradle-maven-publish-plugin/releases/tag/0.36.0)\n\n[Compare\nSource](https://redirect.github.com/vanniktech/gradle-maven-publish-plugin/compare/0.35.0...0.36.0)\n\n**BREAKING**\n\n- Updated minimum supported JDK, Gradle, Android Gradle Plugin and\nKotlin versions.\n- Removed support for Dokka v1, it's now required to use Dokka in v2\nmode.\n- Mark `DirectorySignatureType` internal.\n\n**Behavior changes**\n\n- `validateDeployment` now has the `DeploymentValidation` enum as type\ninstead of being a boolean. The default\nis now to just wait for the `VALIDATED` state. The previous behavior can\nbe achieved by setting it to `PUBLISHED`.\n  `NONE` can be used for disabling the validation completely.\n- When calling `configure(...)` manually to configure what to publish\nand not passing `javadocJar` explicity,\n  the plugin now defaults to publishing an empty javadoc jar.\n\n**Features**\n\n- Android projects now support using Dokka for javadoc creation, this\nwill happen automatically\nwhen using the default options and the Dokka plugin is applied to the\nproject.\n- Added consistent `JavadocJar` and `SourcesJar` options to\n`configureBasedOnAppliedPlugins` and to all\napplicable project types that can be passed to `configure`. The previous\n`Boolean` based versions have\n  been deprecated.\n- When enabling Maven Central publishing through the DSL, the\n`mavenCentralDeploymentValidation` and\n`mavenCentralAutomaticPublishing` are used for the default values of the\n2 parameters when they are not passed\nexplicitly. This allows to more easily override them in certain\nenvironments.\n- When isolated projects is enabled the module/project specific\n`gradle.properties` files are now considered in\n  the same way they are when isolated projects is disabled.\n\n**Improvements**\n\n- Better error message when Maven Central credentials are missing.\n\n##### Minimum supported versions\n\n- JDK 17\n- Gradle 9.0.0\n- Android Gradle Plugin 8.13.0\n- Kotlin Gradle Plugin 2.2.0\n\n##### Compatibility tested up to\n\n- JDK 25\n- Gradle 9.3.0\n- Gradle 9.4.0-milestone-4\n- Android Gradle Plugin 8.13.2\n- Android Gradle Plugin 9.0.0\n- Android Gradle Plugin 9.1.0-alpha05\n- Kotlin Gradle Plugin 2.3.0\n- Kotlin Gradle Plugin 2.3.20-Beta1\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\nAutomerge - At any time (no schedule defined).\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0Mi43NC41IiwidXBkYXRlZEluVmVyIjoiNDIuNzQuNSIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-01-18T22:36:51Z",
+          "tree_id": "3514bea59aa624d975edf187e96572ddce4b0dee",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/41dcb911efaeb7cc49733a0521e003303d76b088"
+        },
+        "date": 1768776426617,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 117.89380196762832,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 103.92301358402385,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 19.505149176394248,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 24.125057630741345,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 16.846962672176385,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 54.47580364053719,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 61.445877656666674,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 22.587729741954554,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 46.833495169696974,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 66.75084304661057,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 98.08963259999999,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
