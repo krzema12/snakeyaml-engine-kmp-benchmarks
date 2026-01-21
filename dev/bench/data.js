@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1768776427601,
+  "lastUpdate": 1769017935890,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -28090,6 +28090,90 @@ window.BENCHMARK_DATA = {
           {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 98.08963259999999,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b8f2323e9a994b72fd71b56abe727cc82d53adb4",
+          "message": "Update dependency org.jetbrains.kotlinx:kotlinx-serialization-json to v1.10.0 (#643)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[org.jetbrains.kotlinx:kotlinx-serialization-json](https://redirect.github.com/Kotlin/kotlinx.serialization)\n| `1.9.0` → `1.10.0` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/org.jetbrains.kotlinx:kotlinx-serialization-json/1.10.0?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/org.jetbrains.kotlinx:kotlinx-serialization-json/1.9.0/1.10.0?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the Dependency\nDashboard for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>Kotlin/kotlinx.serialization\n(org.jetbrains.kotlinx:kotlinx-serialization-json)</summary>\n\n###\n[`v1.10.0`](https://redirect.github.com/Kotlin/kotlinx.serialization/blob/HEAD/CHANGELOG.md#1100-RC--2025-12-18)\n\n\\==================\n\nThis is a release candidate for 1.10.0 based on Kotlin 2.3.0. It\nstabilizes a set of frequently used JSON APIs and builder options,\nadopts a new 'Return Value Checker' Kotlin feature, and provides a lot\nof improvements and bug fixes.\n\n#### Stabilization of APIs\n\nkotlinx-serialization 1.10 and subsequent releases will be focused on\nstabilization of existing APIs.\nThe following APIs and configuration options are no longer experimental\nbecause they're widely used without any known major issues:\n\n- `Json` configuration options: `decodeEnumsCaseInsensitive`,\n`allowTrailingComma`, `allowComments`, and `prettyPrintIndent`.\n([#&#8203;3100](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3100))\n- `@EncodeDefault` annotation and its modes.\n([#&#8203;3106](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3106))\n- `JsonUnquotedLiteral` constructor function\n([#&#8203;2900](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2900))\n- `JsonPrimitive` constructor function overloads that accept unsigned\ntypes.\n([#&#8203;3117](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3117))\n- JSON DSL functions on `JsonElement` with `Nothing?` overloads.\n([#&#8203;3117](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3117))\n\n#### Readiness for return value checker\n\nKotlin 2.3.0 [introduces a new\nfeature](https://kotlinlang.org/docs/whatsnew23.html#unused-return-value-checker)\naimed\nat helping you to catch bugs related to the accidentally ignored return\nvalue of the function.\nkotlinx-serialization 1.10.0-RC code is fully marked for this feature,\nmeaning that you\ncan get warnings for unused function calls like\n`Json.encodeToString(...)`.\nTo get the warnings, the feature has to be enabled in your project as\n[described\nhere](https://kotlinlang.org/docs/unused-return-value-checker.html#configure-the-unused-return-value-checker).\n\n#### Polymorphism improvements\n\nPolymorphic serialization received a couple of improvements in this\nrelease:\n\nNew `subclassesOfSealed` utility to automatically register sealed\nsubclasses serializers in polymorphic modules\n([#&#8203;2201](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2201)).\nUse it in your `SerializersModule` when configuring a polymorphic\nhierarchy which contains both abstract and sealed classes.\n[For\nexample](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/2199),\nwhen root of your hierarchy is an `inteface`, but most of your\ninheritors are `sealed` classes.\nThe new function will register all known sealed subclasses for you, so\nyou don’t need to list them one by one.\nThis makes writing your `SerializerModule`s much faster and simpler.\nBig thanks to [Paul de Vrieze](https://redirect.github.com/pdvrieze) for\ncontributing this feature.\n\nClass discriminator conflict check rework\n([#&#8203;3105](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3105)).\nIf a payload already contains a property with the same name as the\nconfigured discriminator (for example, `type`),\nit is called a class discriminator conflict.\nTo produce a correct output and allow more inputs to be deserialized at\nthe same time, the following changes were made:\n\n- Conflicts introduced by `JsonNamingStrategy` transformations are now\ndetected during serialization as well and will cause\n`SerializationException`.\n  It also affects non-polymorphic classes.\n- Conflicts from `ClassDisciminatorMode.ALL_JSON_OBJECTS` and\n`SerializersModuleBuilder.polymorphicDefaultSerializer` are also\ndetected.\n- It is allowed to deserialize such a conflicting key for both sealed\nand open polymorphic hierarchies.\nPreviously, it was possible in the sealed hierarchies alone due to\nmissing assertion. See\n[#&#8203;1664](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/1664)\nfor details.\n\n#### General improvements\n\n- Add `.serialName` to `MissingFieldException` for clearer diagnostics.\n([#&#8203;3114](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3114))\n- Generate unique `Automatic-Module-Name` entries for metadata JARs.\n([#&#8203;3109](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3109))\n- Revised ProGuard rules and added R8 tests.\n([#&#8203;3041](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3041))\n- CBOR: Improved error message when a byte string/array type mismatch is\nencountered.\n([#&#8203;3052](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3052))\n\n#### Bugfixes\n\n- Fix the type in the `BIGNUM_NEGATIVE` tag name.\n([#&#8203;3090](https://redirect.github.com/Kotlin/kotlinx.serialization/issues/3090))\n- CBOR: Fix various bugs in the decoder implementation to be more strict\nand consistent with the specification.\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\nAutomerge - At any time (no schedule defined).\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about this update\nagain.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0Mi44NS4xIiwidXBkYXRlZEluVmVyIjoiNDIuODUuMSIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-01-21T17:44:45Z",
+          "tree_id": "726f07bbe34c7a64dad3e6fa14e3b13afb17ada4",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/b8f2323e9a994b72fd71b56abe727cc82d53adb4"
+        },
+        "date": 1769017935059,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 100.80177230712357,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 99.42997549161441,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 20.26827131590885,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 24.504990277792878,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.440670069554207,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 58.263891691877824,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 80.17559886969697,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 66.24121007145108,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 36.30949834354457,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 114.98964741081082,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
