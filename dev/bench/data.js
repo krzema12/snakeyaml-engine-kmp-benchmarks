@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1773929898853,
+  "lastUpdate": 1774388084746,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -29332,6 +29332,96 @@ window.BENCHMARK_DATA = {
           {
             "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 56.8286475076923,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5c835056f45f1e582395e7e23c2ca1305c90bcf8",
+          "message": "Update kotest to v6.1.9 (#663)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[io.kotest:kotest-runner-junit5](https://redirect.github.com/kotest/kotest)\n| `6.1.7` → `6.1.9` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-runner-junit5/6.1.9?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-runner-junit5/6.1.7/6.1.9?slim=true)\n|\n|\n[io.kotest:kotest-framework-plugin-gradle](https://redirect.github.com/kotest/kotest)\n| `6.1.7` → `6.1.9` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-plugin-gradle/6.1.9?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-plugin-gradle/6.1.7/6.1.9?slim=true)\n|\n|\n[io.kotest:kotest-assertions-table](https://redirect.github.com/kotest/kotest)\n| `6.1.7` → `6.1.9` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-table/6.1.9?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-table/6.1.7/6.1.9?slim=true)\n|\n|\n[io.kotest:kotest-assertions-core](https://redirect.github.com/kotest/kotest)\n| `6.1.7` → `6.1.9` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-core/6.1.9?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-core/6.1.7/6.1.9?slim=true)\n|\n|\n[io.kotest:kotest-framework-engine](https://redirect.github.com/kotest/kotest)\n| `6.1.7` → `6.1.9` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-engine/6.1.9?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-engine/6.1.7/6.1.9?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>kotest/kotest (io.kotest:kotest-runner-junit5)</summary>\n\n###\n[`v6.1.9`](https://redirect.github.com/kotest/kotest/compare/6.1.8...6.1.9)\n\n[Compare\nSource](https://redirect.github.com/kotest/kotest/compare/6.1.8...6.1.9)\n\n###\n[`v6.1.8`](https://redirect.github.com/kotest/kotest/releases/tag/v6.1.8)\n\n[Compare\nSource](https://redirect.github.com/kotest/kotest/compare/6.1.7...6.1.8)\n\n#### What's Changed\n\n- Precise Gradle configuration needed for pitest extension by\n[@&#8203;szpak](https://redirect.github.com/szpak) in\n[#&#8203;5748](https://redirect.github.com/kotest/kotest/pull/5748)\n- Add automatic JUnit4 [@&#8203;Rule](https://redirect.github.com/Rule)\nsupport to KotestTestRunner by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5749](https://redirect.github.com/kotest/kotest/pull/5749)\n- Follow up to\n[#&#8203;5704](https://redirect.github.com/kotest/kotest/issues/5704) to\nclean filters at execution time not configuration time by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5751](https://redirect.github.com/kotest/kotest/pull/5751)\n- ci: add workflow to auto-update API dumps on PR failures by\n[@&#8203;Kantis](https://redirect.github.com/Kantis) in\n[#&#8203;5757](https://redirect.github.com/kotest/kotest/pull/5757)\n- Update JsTestFrameworkTestEngineListener to handle nested tests\ncorrectly. by [@&#8203;sksamuel](https://redirect.github.com/sksamuel)\nin [#&#8203;5752](https://redirect.github.com/kotest/kotest/pull/5752)\n- Enabling update-api-dump for PRs from forks by\n[@&#8203;Kantis](https://redirect.github.com/Kantis) in\n[#&#8203;5760](https://redirect.github.com/kotest/kotest/pull/5760)\n- Make shouldHaveSingleElement and shouldNotHaveSingleElement chainable\nby [@&#8203;PreAgile](https://redirect.github.com/PreAgile) in\n[#&#8203;5756](https://redirect.github.com/kotest/kotest/pull/5756)\n- Fix ProhibitedAnalysisException when re-running failed tests by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5766](https://redirect.github.com/kotest/kotest/pull/5766)\n- Add JSON Schema prefixItems (tuple validation) and enum support by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5771](https://redirect.github.com/kotest/kotest/pull/5771)\n- Add primitive array support for contain matcher\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5775](https://redirect.github.com/kotest/kotest/pull/5775)\n- Add JS lifecycle order test for issue\n[#&#8203;3340](https://redirect.github.com/kotest/kotest/issues/3340) by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5767](https://redirect.github.com/kotest/kotest/pull/5767)\n- Mark AnnotationSpec lifecycle methods as implicitly used by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5768](https://redirect.github.com/kotest/kotest/pull/5768)\n- Support [@&#8203;Suppress](https://redirect.github.com/Suppress) for\nduplicated test name and focus-in-nested-test warnings by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5769](https://redirect.github.com/kotest/kotest/pull/5769)\n- Fix withClue clue context not included in assertion errors on non-JVM\nplatforms by [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5770](https://redirect.github.com/kotest/kotest/pull/5770)\n- re-add support for gradle test filters after gradle 9.4.0 by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;5785](https://redirect.github.com/kotest/kotest/pull/5785)\n- Add primitive array support for sorted (shouldBeSorted) matcher\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5781](https://redirect.github.com/kotest/kotest/pull/5781)\n- Fix Slow Arb.generate for large objects by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5761](https://redirect.github.com/kotest/kotest/pull/5761)\n- Publish IntelliJ plugin distribution zip to GitHub Packages on master\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5763](https://redirect.github.com/kotest/kotest/pull/5763)\n- Tidy up logging across the engine and runner by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5787](https://redirect.github.com/kotest/kotest/pull/5787)\n- Fix typo in `SpringExtension` by\n[@&#8203;T45K](https://redirect.github.com/T45K) in\n[#&#8203;5788](https://redirect.github.com/kotest/kotest/pull/5788)\n- Refactor `Discovery` to improve class visibility filtering by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5790](https://redirect.github.com/kotest/kotest/pull/5790)\n- Add tests for leading wildcard class name Gradle filter\n([#&#8203;5639](https://redirect.github.com/kotest/kotest/issues/5639))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5791](https://redirect.github.com/kotest/kotest/pull/5791)\n- Add primitive array support for startWith/endWith matchers\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5779](https://redirect.github.com/kotest/kotest/pull/5779)\n- Add primitive array support for containExactly matcher\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5777](https://redirect.github.com/kotest/kotest/pull/5777)\n- closing\n[#&#8203;5782](https://redirect.github.com/kotest/kotest/issues/5782) :\nadd ClasspathRootSelector support to shouldRunTests g… by\n[@&#8203;SimY4](https://redirect.github.com/SimY4) in\n[#&#8203;5783](https://redirect.github.com/kotest/kotest/pull/5783)\n- Add LazyJvmAssertion to avoid stacktraces in inspectors by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5759](https://redirect.github.com/kotest/kotest/pull/5759)\n- Add primitive array support for beIn (shouldBeIn) matcher\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5780](https://redirect.github.com/kotest/kotest/pull/5780)\n- Add finalizeSpec DSL function to TestConfiguration and Spec by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5750](https://redirect.github.com/kotest/kotest/pull/5750)\n- Add tests and fix for afterSpec/beforeSpec in TestFactory\n([#&#8203;4133](https://redirect.github.com/kotest/kotest/issues/4133))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5786](https://redirect.github.com/kotest/kotest/pull/5786)\n- Normalize line breaks in test names for Gradle test filters by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5764](https://redirect.github.com/kotest/kotest/pull/5764)\n- Add primitive array support for inorder (shouldContainInOrder) matcher\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5778](https://redirect.github.com/kotest/kotest/pull/5778)\n- Add primitive array support for containAll matcher\n([#&#8203;4354](https://redirect.github.com/kotest/kotest/issues/4354))\nby [@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;5776](https://redirect.github.com/kotest/kotest/pull/5776)\n\n#### New Contributors\n\n- [@&#8203;PreAgile](https://redirect.github.com/PreAgile) made their\nfirst contribution in\n[#&#8203;5756](https://redirect.github.com/kotest/kotest/pull/5756)\n- [@&#8203;SimY4](https://redirect.github.com/SimY4) made their first\ncontribution in\n[#&#8203;5783](https://redirect.github.com/kotest/kotest/pull/5783)\n\n**Full Changelog**:\n<https://github.com/kotest/kotest/compare/v6.1.7...v6.1.8>\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: Branch creation - At any time (no schedule defined),\nAutomerge - At any time (no schedule defined).\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR becomes conflicted, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My42Ni40IiwidXBkYXRlZEluVmVyIjoiNDMuNjYuNCIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-03-24T21:24:00Z",
+          "tree_id": "57cbe8cf65cbcede9de11fa33c42209dbfe66f1f",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/5c835056f45f1e582395e7e23c2ca1305c90bcf8"
+        },
+        "date": 1774388083722,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 36.80713178453056,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 70.15897557538462,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 24.612670848605667,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 26.50104551131049,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 20.152400287742132,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 152.90277668774326,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 104.21946440762326,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 56.86088607297506,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 62.515728756140355,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 69.91186227150465,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 98.65483355555554,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
