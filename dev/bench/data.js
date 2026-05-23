@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1779559785476,
+  "lastUpdate": 1779560374413,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -30834,6 +30834,90 @@ window.BENCHMARK_DATA = {
             "value": 101.32360854166667,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "9caab001f7865bc246b263bfb6644c2ec1b2fccd",
+          "message": "Update gradle-actions to v6 (#682)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|---|---|\n| [gradle/actions](https://redirect.github.com/gradle/actions) | action\n| major | `v5` → `v6` |\n![age](https://developer.mend.io/api/mc/badges/age/github-tags/gradle%2factions/v6.1.0?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/github-tags/gradle%2factions/v5/v6.1.0?slim=true)\n|\n|\n[gradle:actions__setup-gradle](https://redirect.github.com/gradle/actions)\n| | major | `v5` → `v6` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/gradle:actions__setup-gradle/v6?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/gradle:actions__setup-gradle/v5/v6?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>gradle/actions (gradle/actions)</summary>\n\n###\n[`v6.1.0`](https://redirect.github.com/gradle/actions/releases/tag/v6.1.0)\n\n[Compare\nSource](https://redirect.github.com/gradle/actions/compare/v6.0.1...v6.1.0)\n\n#### New: Basic Cache Provider\n\nA new MIT-licensed **Basic Caching** provider is now available as an\nalternative to the proprietary **Enhanced Caching** provided by\n`gradle-actions-caching`. Choose Basic Caching by setting\n`cache-provider: basic` on `setup-gradle` or `dependency-submission`\nactions.\n\n- Built on `@actions/cache` -- fully open source\n- Caches `~/.gradle/caches` and `~/.gradle/wrapper` directories\n- Cache key derived from build files (`*.gradle*`,\n`gradle-wrapper.properties`, etc.)\n- Clean cache on build file changes (no restore keys, preventing stale\nentry accumulation)\n\n**Limitations vs Enhanced Caching:** No cache cleanup, no deduplication\nof cached content, cached content is fixed unless build files change.\n\n#### Revamped Licensing & Distribution Documentation\n\n- New **DISTRIBUTION.md** documents the licensing of each component\n(particularly Basic Caching vs Enhanced Caching)\n- Simplified licensing notices in README, docs, and runtime log output\n- Clear usage tiers: Enhanced Caching is free for public repos and in\nFree Preview for private repos\n\n#### What's Changed\n\n- Use a unique cache entry for wrapper-validation test by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;921](https://redirect.github.com/gradle/actions/pull/921)\n- Update Dependencies by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;922](https://redirect.github.com/gradle/actions/pull/922)\n- Update dependencies and resolve npm vulnerabilities by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;933](https://redirect.github.com/gradle/actions/pull/933)\n- Add open-source 'basic' cache provider and revamp licensing\ndocumentation by [@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;930](https://redirect.github.com/gradle/actions/pull/930)\n- Restructure caching documentation for basic and enhanced providers by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;934](https://redirect.github.com/gradle/actions/pull/934)\n\n**Full Changelog**:\n<https://github.com/gradle/actions/compare/v6.0.1...v6.1.0>\n\n###\n[`v6.0.1`](https://redirect.github.com/gradle/actions/releases/tag/v6.0.1)\n\n[Compare\nSource](https://redirect.github.com/gradle/actions/compare/v6...v6.0.1)\n\n> \\[!IMPORTANT]\n> The release of `gradle/actions@v6` contains important changes to the\nlicense terms. More details in [this blog\npost](https://blog.gradle.org/github-actions-for-gradle-v6).\n> **TL;DR**: By upgrading to v6, you accept the [Terms of\nUse](https://gradle.com/legal/terms-of-use/) for the\n`gradle-actions-caching` component.\n\n##### Summary\n\nThe [license changes in\nv6](https://blog.gradle.org/github-actions-for-gradle-v6) introduced a\n`gradle-actions-caching` license notice that is printed in logs and in\neach job summary.\n\nWith this release, the license notice will be muted if build-scan terms\nhave been accepted, or if a Develocity access key is provided.\n\n##### What's Changed\n\n- Bump actions used in docs by\n[@&#8203;Goooler](https://redirect.github.com/Goooler) in\n[#&#8203;792](https://redirect.github.com/gradle/actions/pull/792)\n- Add typing information for use by typesafegithub by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;910](https://redirect.github.com/gradle/actions/pull/910)\n- Mute license warning when terms are accepted by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;911](https://redirect.github.com/gradle/actions/pull/911)\n- Mention explicit license acceptance in notice by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;912](https://redirect.github.com/gradle/actions/pull/912)\n- Bump com.fasterxml.jackson.dataformat:jackson-dataformat-smile from\n2.21.1 to 2.21.2 in /sources/test/init-scripts in the gradle group\nacross 1 directory by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;907](https://redirect.github.com/gradle/actions/pull/907)\n\n**Full Changelog**:\n<https://github.com/gradle/actions/compare/v6.0.0...v6.0.1>\n\n###\n[`v6.0.0`](https://redirect.github.com/gradle/actions/releases/tag/v6.0.0)\n\n[Compare\nSource](https://redirect.github.com/gradle/actions/compare/v6...v6)\n\n> \\[!IMPORTANT]\n> The release of `gradle/actions@v6` contains important changes to the\nlicense terms. More details in [this blog\npost](https://blog.gradle.org/github-actions-for-gradle-v6).\n> **TL;DR**: By upgrading to v6, you accept the [Terms of\nUse](https://gradle.com/legal/terms-of-use/) for the\n`gradle-actions-caching` component.\n\n##### Summary\n\n- Caching functionality of 'gradle-actions' has been extracted into a\nseparate `gradle-actions-caching` library, and is no longer open-source.\nSee [this blog\npost](https://blog.gradle.org/github-actions-for-gradle-v6) for more\ncontext.\n- Existing, rudimentary, configuration-cache support has been removed,\npending a fully functional implementation in `gradle-actions-caching`.\n- Dependencies updated to address security vulnerabilities\n\n> \\[!IMPORTANT]\n>\n> #### Licensing notice\n>\n> The caching functionality in \\`gradle-actions\\` has been extracted\ninto \\`gradle-actions-caching\\`, a proprietary commercial component that\nis not covered by the MIT License.\n> The bundled \\`gradle-actions-caching\\` component is licensed and\ngoverned by a separate license, available at\n<https://gradle.com/legal/terms-of-use/>.\n>\n> The \\`gradle-actions-caching\\` component is used only when caching is\nenabled and is not loaded or used when caching is disabled.\n>\n> Use of the \\`gradle-actions-caching\\` component is subject to a\nseparate license, available at <https://gradle.com/legal/terms-of-use/>.\n> If you do not agree to these license terms, do not use the\n\\`gradle-actions-caching\\` component.\n\n##### What's Changed\n\n- Bump the npm-dependencies group in /sources with 2 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;866](https://redirect.github.com/gradle/actions/pull/866)\n- Update known wrapper checksums by\n[@&#8203;github-actions](https://redirect.github.com/github-actions)\\[bot]\nin [#&#8203;868](https://redirect.github.com/gradle/actions/pull/868)\n- Dependency updates by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;876](https://redirect.github.com/gradle/actions/pull/876)\n- Update known wrapper checksums by\n[@&#8203;github-actions](https://redirect.github.com/github-actions)\\[bot]\nin [#&#8203;878](https://redirect.github.com/gradle/actions/pull/878)\n- Bump [@&#8203;types/node](https://redirect.github.com/types/node) from\n25.3.3 to 25.3.5 in /sources in the npm-dependencies group across 1\ndirectory by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;877](https://redirect.github.com/gradle/actions/pull/877)\n- Bump the github-actions group across 3 directories with 3 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;867](https://redirect.github.com/gradle/actions/pull/867)\n- Update known wrapper checksums by\n[@&#8203;github-actions](https://redirect.github.com/github-actions)\\[bot]\nin [#&#8203;881](https://redirect.github.com/gradle/actions/pull/881)\n- Bump the npm-dependencies group in /sources with 6 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;879](https://redirect.github.com/gradle/actions/pull/879)\n- Bump the github-actions group across 3 directories with 5 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;880](https://redirect.github.com/gradle/actions/pull/880)\n- Remove configuration-cache support by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;884](https://redirect.github.com/gradle/actions/pull/884)\n- Extract caching logic into a separate `gradle-actions-caching`\ncomponent by [@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;885](https://redirect.github.com/gradle/actions/pull/885)\n- Update gradle-actions-caching library to v0.3.0 by\n[@&#8203;bot-githubaction](https://redirect.github.com/bot-githubaction)\nin [#&#8203;899](https://redirect.github.com/gradle/actions/pull/899)\n- Avoid windows shutdown bug by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;900](https://redirect.github.com/gradle/actions/pull/900)\n- Dependency updates by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;905](https://redirect.github.com/gradle/actions/pull/905)\n- Fix critical and high npm vulnerabilities by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;904](https://redirect.github.com/gradle/actions/pull/904)\n- Fix rendering of job-disabled message by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;909](https://redirect.github.com/gradle/actions/pull/909)\n\n**Full Changelog**:\n<https://github.com/gradle/actions/compare/v5.0.2...v6.0.0>\n\n### [`v6`](https://redirect.github.com/gradle/actions/compare/v5...v6)\n\n[Compare\nSource](https://redirect.github.com/gradle/actions/compare/v5.0.2...v6)\n\n###\n[`v5.0.2`](https://redirect.github.com/gradle/actions/releases/tag/v5.0.2)\n\n[Compare\nSource](https://redirect.github.com/gradle/actions/compare/v5.0.1...v5.0.2)\n\n#### Summary\n\nThis release contains no functional changes. It updates dependencies and\nknown Gradle wrapper checksums.\n\n#### What's Changed\n\n- Update dependencies by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;851](https://redirect.github.com/gradle/actions/pull/851)\n- Bump the github-actions group across 2 directories with 3 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;850](https://redirect.github.com/gradle/actions/pull/850)\n- Update DV config by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;848](https://redirect.github.com/gradle/actions/pull/848)\n- Convert project to ESM and update dependencies by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;854](https://redirect.github.com/gradle/actions/pull/854)\n- Workflow fixes by [@&#8203;bigdaz](https://redirect.github.com/bigdaz)\nin [#&#8203;856](https://redirect.github.com/gradle/actions/pull/856)\n- Remove superfluous text from log message by\n[@&#8203;bigdaz](https://redirect.github.com/bigdaz) in\n[#&#8203;861](https://redirect.github.com/gradle/actions/pull/861)\n- Bump the github-actions group across 1 directory with 2 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;860](https://redirect.github.com/gradle/actions/pull/860)\n- Bump the npm-dependencies group across 1 directory with 3 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;859](https://redirect.github.com/gradle/actions/pull/859)\n- Update known wrapper checksums by\n[@&#8203;github-actions](https://redirect.github.com/github-actions)\\[bot]\nin [#&#8203;857](https://redirect.github.com/gradle/actions/pull/857)\n- Bump com.fasterxml.jackson.dataformat:jackson-dataformat-smile from\n2.21.0 to 2.21.1 in /sources/test/init-scripts in the gradle group\nacross 1 directory by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;862](https://redirect.github.com/gradle/actions/pull/862)\n- Bump the npm-dependencies group in /sources with 2 updates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;863](https://redirect.github.com/gradle/actions/pull/863)\n- Bump github/codeql-action from 4.32.3 to 4.32.4 in the github-actions\ngroup across 1 directory by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;864](https://redirect.github.com/gradle/actions/pull/864)\n\n**Full Changelog**:\n<https://github.com/gradle/actions/compare/v5.0.1...v5.0.2>\n\n###\n[`v5.0.1`](https://redirect.github.com/gradle/actions/releases/tag/v5.0.1)\n\n[Compare\nSource](https://redirect.github.com/gradle/actions/compare/v5...v5.0.1)\n\n##### What's Changed\n\n- Bump `npm` code dependency versions\n- Bump Gradle versions used in sample builds\n- Bump dependencies versions in Gradle sample builds\n- Bump GitHub actions used for build and test\n- Update known wrapper checksums to include Gradle 9.2+\n\n**Full Changelog**:\n<https://github.com/gradle/actions/compare/v5.0.0...v5.0.1>\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My4xOTQuMCIsInVwZGF0ZWRJblZlciI6IjQzLjE5NC4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-05-23T18:12:25Z",
+          "tree_id": "67eee1ce725e51e266f8ab27b956bfa882d62145",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/9caab001f7865bc246b263bfb6644c2ec1b2fccd"
+        },
+        "date": 1779560373336,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 69.0514014334986,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 22.153918011600158,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 52.17068847653061,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 96.18059294621048,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 95.20481274316322,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 58.06503406758854,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 80.3009979819672,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 15.081513921867758,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 23.700129351292162,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.212841035218966,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
           }
         ]
       }
