@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1779558122334,
+  "lastUpdate": 1779558754909,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -30654,6 +30654,96 @@ window.BENCHMARK_DATA = {
             "value": 13.828807739387418,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "39aba711b572dbc72f60a7477b44c7e12bc71ee9",
+          "message": "Update actions-upload-artifact to v7 (#680)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|---|---|\n|\n[actions/upload-artifact](https://redirect.github.com/actions/upload-artifact)\n| action | major | `v6` → `v7` |\n![age](https://developer.mend.io/api/mc/badges/age/github-tags/actions%2fupload-artifact/v7.0.1?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/github-tags/actions%2fupload-artifact/v6/v7.0.1?slim=true)\n|\n|\n[actions:upload-artifact](https://redirect.github.com/actions/upload-artifact)\n| | major | `v6` → `v7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/actions:upload-artifact/v7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/actions:upload-artifact/v6/v7?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>actions/upload-artifact (actions/upload-artifact)</summary>\n\n###\n[`v7.0.1`](https://redirect.github.com/actions/upload-artifact/releases/tag/v7.0.1)\n\n[Compare\nSource](https://redirect.github.com/actions/upload-artifact/compare/v7...v7.0.1)\n\n##### What's Changed\n\n- Update the readme with direct upload details by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;795](https://redirect.github.com/actions/upload-artifact/pull/795)\n- Readme: bump all the example versions to v7 by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;796](https://redirect.github.com/actions/upload-artifact/pull/796)\n- Include changes in typespec/ts-http-runtime 0.3.5 by\n[@&#8203;yacaovsnc](https://redirect.github.com/yacaovsnc) in\n[#&#8203;797](https://redirect.github.com/actions/upload-artifact/pull/797)\n\n**Full Changelog**:\n<https://github.com/actions/upload-artifact/compare/v7...v7.0.1>\n\n###\n[`v7.0.0`](https://redirect.github.com/actions/upload-artifact/releases/tag/v7.0.0)\n\n[Compare\nSource](https://redirect.github.com/actions/upload-artifact/compare/v7...v7)\n\n#### v7 What's new\n\n##### Direct Uploads\n\nAdds support for uploading single files directly (unzipped). Callers can\nset the new `archive` parameter to `false` to skip zipping the file\nduring upload. Right now, we only support single files. The action will\nfail if the glob passed resolves to multiple files. The `name` parameter\nis also ignored with this setting. Instead, the name of the artifact\nwill be the name of the uploaded file.\n\n##### ESM\n\nTo support new versions of the `@actions/*` packages, we've upgraded the\npackage to ESM.\n\n#### What's Changed\n\n- Add proxy integration test by\n[@&#8203;Link-](https://redirect.github.com/Link-) in\n[#&#8203;754](https://redirect.github.com/actions/upload-artifact/pull/754)\n- Upgrade the module to ESM and bump dependencies by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;762](https://redirect.github.com/actions/upload-artifact/pull/762)\n- Support direct file uploads by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;764](https://redirect.github.com/actions/upload-artifact/pull/764)\n\n#### New Contributors\n\n- [@&#8203;Link-](https://redirect.github.com/Link-) made their first\ncontribution in\n[#&#8203;754](https://redirect.github.com/actions/upload-artifact/pull/754)\n\n**Full Changelog**:\n<https://github.com/actions/upload-artifact/compare/v6...v7.0.0>\n\n###\n[`v7`](https://redirect.github.com/actions/upload-artifact/compare/v6...v7)\n\n[Compare\nSource](https://redirect.github.com/actions/upload-artifact/compare/v6.0.0...v7)\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My4xOTQuMCIsInVwZGF0ZWRJblZlciI6IjQzLjE5NC4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-05-23T17:45:30Z",
+          "tree_id": "d719daca72d542aa86f3793585f5acb34f9cad74",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/39aba711b572dbc72f60a7477b44c7e12bc71ee9"
+        },
+        "date": 1779558753787,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 65.79067268812686,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 95.2836248148148,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 90.62374010436416,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 98.07463212928084,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 50.1023772677481,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 79.94452492950819,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 16.96312612859223,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 23.150271589293887,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.068520235221072,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 21.248550556741208,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 35.40472658380281,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
       }
