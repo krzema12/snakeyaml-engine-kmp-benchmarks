@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1779570143928,
+  "lastUpdate": 1779692353529,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -31097,6 +31097,90 @@ window.BENCHMARK_DATA = {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 101.807081,
             "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "a70c7a5d918615838a4cddcb947992977034bf81",
+          "message": "Update actions-download-artifact to v8 (#681)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|---|---|\n|\n[actions/download-artifact](https://redirect.github.com/actions/download-artifact)\n| action | major | `v7` → `v8` |\n![age](https://developer.mend.io/api/mc/badges/age/github-tags/actions%2fdownload-artifact/v8.0.1?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/github-tags/actions%2fdownload-artifact/v7/v8.0.1?slim=true)\n|\n|\n[actions:download-artifact](https://redirect.github.com/actions/download-artifact)\n| | major | `v7` → `v8` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/actions:download-artifact/v8?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/actions:download-artifact/v7/v8?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>actions/download-artifact (actions/download-artifact)</summary>\n\n###\n[`v8.0.1`](https://redirect.github.com/actions/download-artifact/releases/tag/v8.0.1)\n\n[Compare\nSource](https://redirect.github.com/actions/download-artifact/compare/v8...v8.0.1)\n\n##### What's Changed\n\n- Support for CJK characters in the artifact name by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;471](https://redirect.github.com/actions/download-artifact/pull/471)\n- Add a regression test for artifact name + content-type mismatches by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;472](https://redirect.github.com/actions/download-artifact/pull/472)\n\n**Full Changelog**:\n<https://github.com/actions/download-artifact/compare/v8...v8.0.1>\n\n###\n[`v8.0.0`](https://redirect.github.com/actions/download-artifact/releases/tag/v8.0.0)\n\n[Compare\nSource](https://redirect.github.com/actions/download-artifact/compare/v8...v8)\n\n##### v8 - What's new\n\n##### Direct downloads\n\nTo support direct uploads in `actions/upload-artifact`, the action will\nno longer attempt to unzip all downloaded files. Instead, the action\nchecks the `Content-Type` header ahead of unzipping and skips non-zipped\nfiles. Callers wishing to download a zipped file as-is can also set the\nnew `skip-decompress` parameter to `false`.\n\n##### Enforced checks (breaking)\n\nA previous release introduced digest checks on the download. If a\ndownload hash didn't match the expected hash from the server, the action\nwould log a warning. Callers can now configure the behavior on mismatch\nwith the `digest-mismatch` parameter. To be secure by default, we are\nnow defaulting the behavior to `error` which will fail the workflow run.\n\n##### ESM\n\nTo support new versions of the @&#8203;actions/\\* packages, we've\nupgraded the package to ESM.\n\n##### What's Changed\n\n- Don't attempt to un-zip non-zipped downloads by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;460](https://redirect.github.com/actions/download-artifact/pull/460)\n- Add a setting to specify what to do on hash mismatch and default it to\n`error` by\n[@&#8203;danwkennedy](https://redirect.github.com/danwkennedy) in\n[#&#8203;461](https://redirect.github.com/actions/download-artifact/pull/461)\n\n**Full Changelog**:\n<https://github.com/actions/download-artifact/compare/v7...v8.0.0>\n\n###\n[`v8`](https://redirect.github.com/actions/download-artifact/compare/v7...v8)\n\n[Compare\nSource](https://redirect.github.com/actions/download-artifact/compare/v7.0.0...v8)\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My4xOTQuMCIsInVwZGF0ZWRJblZlciI6IjQzLjE5NC4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-05-23T20:53:14Z",
+          "tree_id": "144ca7a7e9f40fde8fd1e3fbdf374cdf7ebb64a7",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/a70c7a5d918615838a4cddcb947992977034bf81"
+        },
+        "date": 1779692352544,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 109.80808720829332,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 109.38044778443191,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 60.09346507280967,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 74.56048026285714,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 18.66155635115036,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 27.073989633926697,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 13.598941592809188,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 22.422007591587487,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 36.00982285704226,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 69.13230325725995,
+            "unit": "us/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
