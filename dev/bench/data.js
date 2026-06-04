@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1779831540324,
+  "lastUpdate": 1780568059064,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -31356,6 +31356,96 @@ window.BENCHMARK_DATA = {
             "value": 15.878633689894457,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "3110813+krzema12@users.noreply.github.com",
+            "name": "Piotr Krzemiński",
+            "username": "krzema12"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "29fa98a6ca78ab1e07dfd886e80251008fd5ddc4",
+          "message": "Fix Issue 75 - YAML 1.2 printable range compliance (port from upstream) (#685)\n\n## Summary\n\nPorts four upstream commits from\n[snakeyaml/snakeyaml-engine](https://github.com/snakeyaml/snakeyaml-engine)\nthat fix character handling and YAML 1.2 printable range compliance for\nIssue 75.\n\n## Ported commits\n\n| Commit | Description |\n|--------|-------------|\n|\n[snakeyaml-engine@06b1c92](https://github.com/snakeyaml/snakeyaml-engine/commit/06b1c92)\n| Add initial test for issue 75 (DEL in double-quoted scalar) |\n|\n[snakeyaml-engine@2c85c8c](https://github.com/snakeyaml/snakeyaml-engine/commit/2c85c8c)\n| Allow 0x7F in `StreamReader.isPrintable()` |\n|\n[snakeyaml-engine@c1d4d3c](https://github.com/snakeyaml/snakeyaml-engine/commit/c1d4d3c)\n| Reject 0x7F in plain scalars, comments, block scalars (`ScannerImpl`)\n+ update test |\n|\n[snakeyaml-engine@cedf62b](https://github.com/snakeyaml/snakeyaml-engine/commit/cedf62b)\n| Adapt surrogate pair boundary fix (Kotlin equivalent: off-by-one in\n`Character.charCount`) |\n\n## Changes\n\n### StreamReader.kt — Allow 0x7F as printable (commit `2c85c8c`)\nChanged `isPrintable()` range from `0x20..0x7E` to `0x20..0x7F`,\nallowing the DEL character through the stream reader. This is required\nper the YAML 1.2 `nb-json` production, which applies to double-quoted\nand single-quoted strings.\n\n### ScannerImpl.kt — Reject 0x7F in non-quoted contexts (commit\n`c1d4d3c`)\nAdded DEL character validation in three methods to enforce YAML 1.2\n`c-printable` production rules:\n- `scanComment()` — rejects DEL in comments\n- `scanBlockScalar()` — rejects DEL in literal/folded block scalars\n- `scanPlain()` — rejects DEL in plain scalars\n\nEach throws a `ScannerException` with a descriptive message when 0x7F is\nencountered.\n\n### Character.kt — Fix surrogate pair boundary (adaptation of commit\n`cedf62b`)\nFixed `charCount()` boundary: changed `<=` to `<` for\n`MIN_SUPPLEMENTARY_CODE_POINT`, so `charCount(0x10000)` correctly\nreturns 2 instead of 1. The upstream Java fix was a `Reader.read` buffer\nsizing change; the Kotlin equivalent manifested as an off-by-one that\ncaused surrogate pairs at U+10000 to be misinterpreted as two separate\ncode points, with the low surrogate failing the printable check.\n\n### Tests (commits `06b1c92` + `c1d4d3c`)\n- **StreamReaderHighSurrogateTest.kt** — Verifies surrogate pairs at\nbuffer boundaries are handled without errors\n- **EscapeCharInDoubleQuoteTest.kt** — 7 test cases covering:\n  - DEL allowed in double-quoted scalars\n  - DEL allowed in single-quoted scalars\n  - DEL rejected in plain scalar values and keys\n  - DEL rejected in comments\n  - DEL rejected in literal and folded block scalars",
+          "timestamp": "2026-06-04T12:03:24+02:00",
+          "tree_id": "5deada8105dabe4047841c3ff7f0dd8c88b2c885",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/29fa98a6ca78ab1e07dfd886e80251008fd5ddc4"
+        },
+        "date": 1780568057491,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 23.055940098511606,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 27.712594574803337,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 17.64421316384495,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 117.7632244225144,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 98.60801477246378,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 56.85170247467384,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 69.44670064126983,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 29.76771868891738,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 40.35715523504273,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 53.2518956026574,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 85.64739779661018,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
       }
