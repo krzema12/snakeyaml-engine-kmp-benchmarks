@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1783315503606,
+  "lastUpdate": 1783319330524,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -32566,6 +32566,90 @@ window.BENCHMARK_DATA = {
           {
             "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 37.39680188148149,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "996b047467180e67dbe00fcc44d48dd0217e4482",
+          "message": "Update actions/checkout action to v7 (#700)\n\nThis PR contains the following updates:\n\n| Package | Type | Update | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|---|---|\n| [actions/checkout](https://redirect.github.com/actions/checkout) |\naction | major | `v6` → `v7` |\n![age](https://developer.mend.io/api/mc/badges/age/github-tags/actions%2fcheckout/v7.0.0?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/github-tags/actions%2fcheckout/v6.0.3/v7.0.0?slim=true)\n|\n| [actions:checkout](https://redirect.github.com/actions/checkout) | |\nmajor | `v6` → `v7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/actions:checkout/v7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/actions:checkout/v6/v7?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>actions/checkout (actions/checkout)</summary>\n\n###\n[`v7.0.0`](https://redirect.github.com/actions/checkout/blob/HEAD/CHANGELOG.md#v700)\n\n[Compare\nSource](https://redirect.github.com/actions/checkout/compare/v7.0.0...v7.0.0)\n\n- Block checking out fork PR for pull\\_request\\_target and workflow\\_run\nby [@&#8203;aiqiaoy](https://redirect.github.com/aiqiaoy) in\n[#&#8203;2454](https://redirect.github.com/actions/checkout/pull/2454)\n- Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the\nminor-actions-dependencies group across 1 directory by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2458](https://redirect.github.com/actions/checkout/pull/2458)\n- Bump flatted from 3.3.1 to 3.4.2 by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2460](https://redirect.github.com/actions/checkout/pull/2460)\n- Bump js-yaml from 4.1.0 to 4.2.0 by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2461](https://redirect.github.com/actions/checkout/pull/2461)\n- Bump [@&#8203;actions/core](https://redirect.github.com/actions/core)\nand\n[@&#8203;actions/tool-cache](https://redirect.github.com/actions/tool-cache)\nand Remove uuid by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2459](https://redirect.github.com/actions/checkout/pull/2459)\n- upgrade module to esm and update dependencies by\n[@&#8203;aiqiaoy](https://redirect.github.com/aiqiaoy) in\n[#&#8203;2463](https://redirect.github.com/actions/checkout/pull/2463)\n- Bump the minor-npm-dependencies group across 1 directory with 3\nupdates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2462](https://redirect.github.com/actions/checkout/pull/2462)\n\n###\n[`v7`](https://redirect.github.com/actions/checkout/blob/HEAD/CHANGELOG.md#v700)\n\n[Compare\nSource](https://redirect.github.com/actions/checkout/compare/v6.0.3...v7.0.0)\n\n- Block checking out fork PR for pull\\_request\\_target and workflow\\_run\nby [@&#8203;aiqiaoy](https://redirect.github.com/aiqiaoy) in\n[#&#8203;2454](https://redirect.github.com/actions/checkout/pull/2454)\n- Bump actions/publish-immutable-action from 0.0.3 to 0.0.4 in the\nminor-actions-dependencies group across 1 directory by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2458](https://redirect.github.com/actions/checkout/pull/2458)\n- Bump flatted from 3.3.1 to 3.4.2 by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2460](https://redirect.github.com/actions/checkout/pull/2460)\n- Bump js-yaml from 4.1.0 to 4.2.0 by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2461](https://redirect.github.com/actions/checkout/pull/2461)\n- Bump [@&#8203;actions/core](https://redirect.github.com/actions/core)\nand\n[@&#8203;actions/tool-cache](https://redirect.github.com/actions/tool-cache)\nand Remove uuid by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2459](https://redirect.github.com/actions/checkout/pull/2459)\n- upgrade module to esm and update dependencies by\n[@&#8203;aiqiaoy](https://redirect.github.com/aiqiaoy) in\n[#&#8203;2463](https://redirect.github.com/actions/checkout/pull/2463)\n- Bump the minor-npm-dependencies group across 1 directory with 3\nupdates by\n[@&#8203;dependabot](https://redirect.github.com/dependabot)\\[bot] in\n[#&#8203;2462](https://redirect.github.com/actions/checkout/pull/2462)\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My4yMzEuMSIsInVwZGF0ZWRJblZlciI6IjQzLjI0Mi4yIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-07-06T08:19:18+02:00",
+          "tree_id": "28db5dfd2192950a61ff0d7c9ecbfc6779624268",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/996b047467180e67dbe00fcc44d48dd0217e4482"
+        },
+        "date": 1783319329107,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 64.46341311899388,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 113.50314418862418,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 97.50080694719698,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 68.43974923293412,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 78.62229126527778,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 15.925818717727875,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 28.164319691090526,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.592545956786733,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 21.35007026130236,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 39.03312258167939,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
