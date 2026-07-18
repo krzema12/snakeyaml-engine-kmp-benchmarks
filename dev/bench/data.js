@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1783320302920,
+  "lastUpdate": 1784390580550,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -32736,6 +32736,96 @@ window.BENCHMARK_DATA = {
             "value": 10.098315342890283,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "2de5e28ff070af99a320d0abb6abc03461ae93dc",
+          "message": "Update kotest to v6.2.2 (#711)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[io.kotest:kotest-runner-junit5](https://redirect.github.com/kotest/kotest)\n| `6.2.1` → `6.2.2` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-runner-junit5/6.2.2?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-runner-junit5/6.2.1/6.2.2?slim=true)\n|\n|\n[io.kotest:kotest-framework-plugin-gradle](https://redirect.github.com/kotest/kotest)\n| `6.2.1` → `6.2.2` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-plugin-gradle/6.2.2?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-plugin-gradle/6.2.1/6.2.2?slim=true)\n|\n|\n[io.kotest:kotest-assertions-table](https://redirect.github.com/kotest/kotest)\n| `6.2.1` → `6.2.2` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-table/6.2.2?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-table/6.2.1/6.2.2?slim=true)\n|\n|\n[io.kotest:kotest-assertions-core](https://redirect.github.com/kotest/kotest)\n| `6.2.1` → `6.2.2` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-core/6.2.2?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-core/6.2.1/6.2.2?slim=true)\n|\n|\n[io.kotest:kotest-framework-engine](https://redirect.github.com/kotest/kotest)\n| `6.2.1` → `6.2.2` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-engine/6.2.2?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-engine/6.2.1/6.2.2?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>kotest/kotest (io.kotest:kotest-runner-junit5)</summary>\n\n###\n[`v6.2.2`](https://redirect.github.com/kotest/kotest/releases/tag/v6.2.2)\n\n[Compare\nSource](https://redirect.github.com/kotest/kotest/compare/6.2.1...6.2.2)\n\n##### What's Changed\n\n- Document instant-based ZonedDateTime `plusOrMinus` comparison by\n[@&#8203;AlexCue987](https://redirect.github.com/AlexCue987) with\n[@&#8203;Copilot](https://redirect.github.com/Copilot) in\n[#&#8203;6159](https://redirect.github.com/kotest/kotest/pull/6159)\n- Add documentation for OffsetDateTime tolerance matcher by\n[@&#8203;AlexCue987](https://redirect.github.com/AlexCue987) in\n[#&#8203;6161](https://redirect.github.com/kotest/kotest/pull/6161)\n- Fix typo in proptest config docs by\n[@&#8203;axiom](https://redirect.github.com/axiom) in\n[#&#8203;6155](https://redirect.github.com/kotest/kotest/pull/6155)\n- disable return-value-checker for releases by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6165](https://redirect.github.com/kotest/kotest/pull/6165)\n- fix(kotest-framework-engine): Use display-name rendering for ignored\ntests in TeamCity listener by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;6119](https://redirect.github.com/kotest/kotest/pull/6119)\n- fix(kotest-assertions-core): Handle null map values in\nshouldBeEqualUsingFields by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;6112](https://redirect.github.com/kotest/kotest/pull/6112)\n- Update dependency io.mockk:mockk to v1.14.11 by\n[@&#8203;renovate](https://redirect.github.com/renovate)\\[bot] in\n[#&#8203;6163](https://redirect.github.com/kotest/kotest/pull/6163)\n- fix: attach Fail fast scope tracker for each root test case in\ninstance per spec mode by\n[@&#8203;ashdawngary](https://redirect.github.com/ashdawngary) in\n[#&#8203;6160](https://redirect.github.com/kotest/kotest/pull/6160)\n- Update dependency io.projectreactor.tools:blockhound to\nv1.0.17.RELEASE by\n[@&#8203;renovate](https://redirect.github.com/renovate)\\[bot] in\n[#&#8203;6164](https://redirect.github.com/kotest/kotest/pull/6164)\n\n##### New Contributors\n\n- [@&#8203;AlexCue987](https://redirect.github.com/AlexCue987) with\n[@&#8203;Copilot](https://redirect.github.com/Copilot) made their first\ncontribution in\n[#&#8203;6159](https://redirect.github.com/kotest/kotest/pull/6159)\n- [@&#8203;axiom](https://redirect.github.com/axiom) made their first\ncontribution in\n[#&#8203;6155](https://redirect.github.com/kotest/kotest/pull/6155)\n- [@&#8203;ashdawngary](https://redirect.github.com/ashdawngary) made\ntheir first contribution in\n[#&#8203;6160](https://redirect.github.com/kotest/kotest/pull/6160)\n\n**Full Changelog**:\n<https://github.com/kotest/kotest/compare/v6.2.1...v6.2.2>\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My4yNjUuMSIsInVwZGF0ZWRJblZlciI6IjQzLjI2NS4xIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-07-18T15:53:03Z",
+          "tree_id": "c720d76aa1e387bf227586cdad2b4c994c28c81b",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/2de5e28ff070af99a320d0abb6abc03461ae93dc"
+        },
+        "date": 1784390579556,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 49.57223163665915,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 56.27817789710144,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 15.293137176226793,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 25.34253263803043,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 14.313176042182565,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 122.41749191708797,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 96.20463476915064,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 65.83564981083065,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 97.70029886792452,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 27.149931611502268,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 56.90399461944445,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
       }
