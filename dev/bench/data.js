@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1784390580550,
+  "lastUpdate": 1784398696364,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -32825,6 +32825,90 @@ window.BENCHMARK_DATA = {
             "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 56.90399461944445,
             "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b6199ea36fc7b6753833dba0f853226cfc26e64a",
+          "message": "Update kotlin monorepo to v2.4.10 (#712)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n| [org.jetbrains.kotlin.plugin.allopen](https://kotlinlang.org/)\n([source](https://redirect.github.com/JetBrains/kotlin)) | `2.4.0` →\n`2.4.10` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/org.jetbrains.kotlin.plugin.allopen:org.jetbrains.kotlin.plugin.allopen.gradle.plugin/2.4.10?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/org.jetbrains.kotlin.plugin.allopen:org.jetbrains.kotlin.plugin.allopen.gradle.plugin/2.4.0/2.4.10?slim=true)\n|\n| [org.jetbrains.kotlin:kotlin-gradle-plugin](https://kotlinlang.org/)\n([source](https://redirect.github.com/JetBrains/kotlin)) | `2.4.0` →\n`2.4.10` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/org.jetbrains.kotlin:kotlin-gradle-plugin/2.4.10?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/org.jetbrains.kotlin:kotlin-gradle-plugin/2.4.0/2.4.10?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>JetBrains/kotlin\n(org.jetbrains.kotlin.plugin.allopen)</summary>\n\n###\n[`v2.4.10`](https://redirect.github.com/JetBrains/kotlin/releases/tag/v2.4.10):\nKotlin 2.4.10\n\n#### Changelog\n\n##### Backend. Wasm\n\n- [`KT-87066`](https://youtrack.jetbrains.com/issue/KT-87066) K/Wasm:\nNot all files are presented in compiler output directory with\nmultimodule-closed-world and incremental compilation\n\n##### Compiler\n\n- [`KT-86939`](https://youtrack.jetbrains.com/issue/KT-86939) JVM:\nIllegalStateException \"No value for annotation parameter\" when using\nconst val in nested Java annotation array argument\n- [`KT-83766`](https://youtrack.jetbrains.com/issue/KT-83766) K2: Wrong\nsourcePsi is set for `SymbolPsiLiteral` in SLC for annotation arguments\nreferencing a const val\n- [`KT-86728`](https://youtrack.jetbrains.com/issue/KT-86728) Reified\ntype inference: expected type not propagated into inline call inside\nlambda with elvis operator\n\n##### Compose Compiler\n\n- [`b/522127447`](https://issuetracker.google.com/issues/522127447)\nCompose Compiler 2.4: classes previously inferred `stable` now reported\n`runtime`/`Uncertain`\n\n##### Klibs\n\n- [`KT-86501`](https://youtrack.jetbrains.com/issue/KT-86501) Native:\nIrTypeAliasSymbolImpl is already bound. Signature:\nkotlinx.datetime/Instant|null\\[0] on iosSimulatorArm64\n\n##### Tools. CLI\n\n- [`KT-86930`](https://youtrack.jetbrains.com/issue/KT-86930) Introduce\n`kotlinr` in the Kotlin distribution\n\n##### Tools. Gradle. BCV\n\n- [`KT-87223`](https://youtrack.jetbrains.com/issue/KT-87223) Gradle,\nBCV: open version range in kotlinAbiValidationCompatClasspath causes\nkotlin-build-tools-impl to resolve to 2.4.20-Beta1 instead of 2.4.0\n\n##### Tools. Gradle. JS\n\n- [`KT-87304`](https://youtrack.jetbrains.com/issue/KT-87304)\njsBrowserTest fails with \"exited with errors (exit code: 1)\"\n- [`KT-86057`](https://youtrack.jetbrains.com/issue/KT-86057)\nkotlinUpgradeYarnLock skips lock file regeneration when kotlinNpmInstall\nis up-to-date, causing kotlinStoreYarnLock to fail\n\n##### Tools. Gradle. Multiplatform\n\n- [`KT-87084`](https://youtrack.jetbrains.com/issue/KT-87084) False\npositive warning for JS and Wasm compilations when CRI is enabled\n\n##### Tools. Scripts\n\n- [`KT-87076`](https://youtrack.jetbrains.com/issue/KT-87076)\n`@file`:CompilerOptions(\"-jvm-target\", ...) ignored in .main.kts scripts\nin Kotlin 2.4.0, falling back to JVM target 1.8\n- [`KT-86352`](https://youtrack.jetbrains.com/issue/KT-86352) K2\nscripting: FirResolvedTypeRef exception when resolving extension\nfunctions from imported scripts\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0My4yNjUuMSIsInVwZGF0ZWRJblZlciI6IjQzLjI2NS4xIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-07-18T18:09:47Z",
+          "tree_id": "298637bd03821da468a6ccb75fd85029a4960b31",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/b6199ea36fc7b6753833dba0f853226cfc26e64a"
+        },
+        "date": 1784398694913,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 24.79846381720197,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 49.170593398113205,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 53.23159631629136,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 64.34113565737705,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 23.458187640023606,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 28.017542491327077,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 20.141743748629633,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 136.41946799374645,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 121.23219159743505,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 63.53992807462258,
+            "unit": "us/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
