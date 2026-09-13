@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1789271676084,
+  "lastUpdate": 1789280415020,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -33922,6 +33922,90 @@ window.BENCHMARK_DATA = {
           {
             "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 12.863988671480476,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e468df69b3ed13bd5978ea7a9f98b0b72bc79352",
+          "message": "Update kotlinpoet to v2.4.0 (#732)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[com.squareup:kotlinpoet-ksp](https://redirect.github.com/square/kotlinpoet)\n| `2.3.0` → `2.4.0` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/com.squareup:kotlinpoet-ksp/2.4.0?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/com.squareup:kotlinpoet-ksp/2.3.0/2.4.0?slim=true)\n|\n|\n[com.squareup:kotlinpoet](https://redirect.github.com/square/kotlinpoet)\n| `2.3.0` → `2.4.0` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/com.squareup:kotlinpoet/2.4.0?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/com.squareup:kotlinpoet/2.3.0/2.4.0?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>square/kotlinpoet (com.squareup:kotlinpoet-ksp)</summary>\n\n###\n[`v2.4.0`](https://redirect.github.com/square/kotlinpoet/releases/tag/2.4.0)\n\n[Compare\nSource](https://redirect.github.com/square/kotlinpoet/compare/2.3.0...2.4.0)\n\nThanks to\n[@&#8203;eyupcanakman](https://redirect.github.com/eyupcanakman) and\n[@&#8203;arimu1](https://redirect.github.com/arimu1) for contributing to\nthis release.\n\n- New: Kotlin 2.4.20.\n- New: KSP 2.3.11.\n- New: Support for explicit backing fields.\n([#&#8203;2325](https://redirect.github.com/square/kotlinpoet/issues/2325))\n- New: `value class` validations have been relaxed to support\nmulti-field value classes.\n([#&#8203;2329](https://redirect.github.com/square/kotlinpoet/issues/2329))\n- New: Extract `CodeBlockHolder` interface for constructs that can hold\na `CodeBlock` body and their builders.\n([#&#8203;2331](https://redirect.github.com/square/kotlinpoet/issues/2331))\n- New: Add `CodeBlock.Builder.addComment()` for adding `//` comments.\n([#&#8203;2340](https://redirect.github.com/square/kotlinpoet/issues/2340))\n- New: Add `CodeBlockHolder.Builder.addComment()`.\n([#&#8203;2347](https://redirect.github.com/square/kotlinpoet/issues/2347))\n- New: Use `[]` syntax instead of `arrayOf` when emitting annotation\narguments.\n([#&#8203;2361](https://redirect.github.com/square/kotlinpoet/issues/2361))\n- Fix: Keep the `//` prefix on wrapped file comment lines.\n([#&#8203;2315](https://redirect.github.com/square/kotlinpoet/issues/2315))\n- Fix: `TypeVariableName.equals`/`hashCode` no longer overflow on\nrecursively bound generics like `Enum<E : Enum<E>>`.\n([#&#8203;2320](https://redirect.github.com/square/kotlinpoet/issues/2320))\n- Fix: `get` and `set` operator function names are no longer escaped\nwith backticks.\n([#&#8203;2338](https://redirect.github.com/square/kotlinpoet/issues/2338))\n- Fix: Don't special case varargs in `KSAnnotation.toAnnotationSpec`.\n([#&#8203;2360](https://redirect.github.com/square/kotlinpoet/issues/2360))\n- Fix: `KSType.toTypeName()` with the default\n`TypeParameterResolver.EMPTY` now resolves type parameters from their\nenclosing declarations instead of throwing.\n([#&#8203;2368](https://redirect.github.com/square/kotlinpoet/issues/2368))\n- Fix: Emit context parameters after annotations in `FunSpec` and\n`PropertySpec`.\n([#&#8203;2374](https://redirect.github.com/square/kotlinpoet/issues/2374))\n- Fix: An expression body no longer leaks indentation into later\ndeclarations.\n([#&#8203;2365](https://redirect.github.com/square/kotlinpoet/issues/2365))\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0NC43OS4xIiwidXBkYXRlZEluVmVyIjoiNDQuNzkuMSIsInRhcmdldEJyYW5jaCI6Im1haW4iLCJsYWJlbHMiOltdfQ==-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-09-13T06:13:49Z",
+          "tree_id": "6d9dcea02730c4ab77b7caf93e844a6903df7430",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/e468df69b3ed13bd5978ea7a9f98b0b72bc79352"
+        },
+        "date": 1789280413945,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 20.5167144377207,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 32.88191751592357,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 51.72517158909335,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 54.94715681684454,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 67.96068203661972,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 150.32209576556113,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 117.12527740714964,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 23.790112845765556,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 27.306528084387544,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 19.163463523176773,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: 1\nthreads: 1"
           }
