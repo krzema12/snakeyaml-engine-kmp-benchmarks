@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791412705319,
+  "lastUpdate": 1791449280966,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -34360,6 +34360,96 @@ window.BENCHMARK_DATA = {
           {
             "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 54.0652767704918,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "public.somov@gmail.com",
+            "name": "Andrey Somov",
+            "username": "asomov"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "acc1391fa11189f396a16447cba15f63dc050c41",
+          "message": "Port changes from snakeyaml-engine 3.0-3.2 (#737)\n\nPorts every logic and test change made in snakeyaml-engine between the\nlast analyzed upstream commit (`be40e57`) and the **3.2 release**\n(`8a670d3`). After this PR the project reflects upstream\nsnakeyaml-engine 3.2.\n\nThe series is 14 commits, one per upstream issue, in upstream order.\nReviewing commit by commit is the easiest way through it.\n\n## What is ported\n\n| Commit | Upstream change | Upstream commits |\n|---|---|---|\n| Fix Issue 72 | Mapping keys must be scalars unless `allowNonScalarKeys\n= true` |\n[8876c5c](https://github.com/snakeyaml/snakeyaml-engine/commit/8876c5c)\n|\n| Port test coverage | Primitive arrays, representer, issue 79 (float\nprecision), issue 88 (`Node.isResolved()` KDoc and tests) |\n[7abcc03](https://github.com/snakeyaml/snakeyaml-engine/commit/7abcc03)\n[9a01a3c](https://github.com/snakeyaml/snakeyaml-engine/commit/9a01a3c)\n[957a804](https://github.com/snakeyaml/snakeyaml-engine/commit/957a804)\n[f90c8cf](https://github.com/snakeyaml/snakeyaml-engine/commit/f90c8cf)\n[75442fd](https://github.com/snakeyaml/snakeyaml-engine/commit/75442fd)\n[8aa1c1f](https://github.com/snakeyaml/snakeyaml-engine/commit/8aa1c1f)\n|\n| Fix Issue 76 | Parse JSON with consecutive TABs |\n[9810a28](https://github.com/snakeyaml/snakeyaml-engine/commit/9810a28)\n|\n| Fix Issue 68 | Comments after an anchor or tag |\n[bc68379](https://github.com/snakeyaml/snakeyaml-engine/commit/bc68379)\n|\n| Fix Issue 84 | Comment on a document marker |\n[46de059](https://github.com/snakeyaml/snakeyaml-engine/commit/46de059)\n[a60a763](https://github.com/snakeyaml/snakeyaml-engine/commit/a60a763)\n|\n| Comments located in a list… | Standalone comments in a block sequence\nno longer become list entries on dump (port from SnakeYAML 512) |\n[170dd30](https://github.com/snakeyaml/snakeyaml-engine/commit/170dd30)\n|\n| Fix Issue 90 | `!!null` followed by an empty line (tests only; the fix\nis part of the issue 68 commit) |\n[f63e3de](https://github.com/snakeyaml/snakeyaml-engine/commit/f63e3de)\n|\n| Fix Issue 92 | Block scalar followed by comments indented less than\nits content |\n[e9c4c0e](https://github.com/snakeyaml/snakeyaml-engine/commit/e9c4c0e)\n[31bb119](https://github.com/snakeyaml/snakeyaml-engine/commit/31bb119)\n[1b13c4f](https://github.com/snakeyaml/snakeyaml-engine/commit/1b13c4f)\n|\n| Fix Issue 95 | Comment on a document marker at the end of the stream |\n[ad5b80a](https://github.com/snakeyaml/snakeyaml-engine/commit/ad5b80a)\n|\n| Fix Issue 97 | Comment on a block scalar indicator line inside a\nsequence |\n[d784be2](https://github.com/snakeyaml/snakeyaml-engine/commit/d784be2)\n[1a2fc4a](https://github.com/snakeyaml/snakeyaml-engine/commit/1a2fc4a)\n[bcdb896](https://github.com/snakeyaml/snakeyaml-engine/commit/bcdb896)\n[f13a6a6](https://github.com/snakeyaml/snakeyaml-engine/commit/f13a6a6)\n|\n| Fix Issue 99 | Accept TAB characters as separation whitespace |\n[35fabdc](https://github.com/snakeyaml/snakeyaml-engine/commit/35fabdc)\n[842715e](https://github.com/snakeyaml/snakeyaml-engine/commit/842715e)\n|\n| Update latest analyzed upstream commit hash | Marker moved to the 3.2\nrelease commit; benchmark baseline bumped to snakeyaml-engine 3.2 | — |\n| Make PrimitiveArrayTest float case portable | A `Float` is a double on\nJS, so the common test uses exactly representable values; upstream's\nvalues are asserted in a JVM-only test | — |\n| Address final review | `allowRecursiveKeys` KDoc, extra parser tests,\npinned error position for the TAB deviation | — |\n\nNot ported, by design: `module-info.java` and the related test package\nmove (JPMS only), Maven/JUnit/plugin updates, and the `byte[]` branch\nremoval in `StandardRepresenter` (`ByteArray` is already dumped as\n`!!binary` here).\n\nIssue 77 (surrogate at the end of the data window,\n[cedf62b](https://github.com/snakeyaml/snakeyaml-engine/commit/cedf62b))\nneeded no change: the reader cuts reads on UTF-8 code point boundaries,\nand both upstream tests already exist. Issues 75 and 80 were ported\nearlier (#685, #690).\n\n## Behaviour changes worth a release note\n\n- **Breaking default (issue 72):** a collection used as a mapping key\nnow throws `Non scalar key is detected but it is not configured to be\nallowed.` unless `LoadSettings(allowNonScalarKeys = true)`.\n`allowRecursiveKeys` only takes effect together with it.\n- **Binary break on JVM:** the `LoadSettings` constructor gains a\nparameter, so consumers compiled against the previous release need to\nrecompile.\n- **Stricter TAB rule (issue 99):** a TAB is now accepted as separation\nafter a token (`a:<TAB>value`, `-<TAB>item`), but a block key or entry\nafter leading spaces plus a TAB (for example `a:\\n <TAB>b: c`) is now\nrejected, as in upstream 3.2.\n- **Comment attachment (issue 92):** a comment that follows a block\nscalar and is indented less than its content is now a block comment of\nthe following key instead of an in-line comment of the scalar.\n\nGiven the breaking default, this probably deserves a major version bump.\n\n## One deliberate difference from upstream\n\nFor the input\n\n```yaml\nfoo:\n  a: 1\n  <TAB>b: 2\n```\n\nupstream fails with a TAB-specific message. This project also rejects\nit, but with `mapping values are not allowed here` (line 3, column 5),\nbecause `scanPlainSpaces` here also skips TABs on continuation lines\n(#173). That behaviour is what makes the YAML Test Suite cases UV7Q,\nNB6Z and HS5T pass here while upstream still skips them, so it is kept.\n`TabSeparationTest` pins the actual error and explains the difference in\na comment. Every other upstream assertion is ported as is.\n\n## YAML Test Suite\n\nSix entries are removed from `Deviations.kt` because the cases now pass:\n6BCT, A2M4, J3BT, K54U, MUS6-03, Y79Y-010. These are the same six cases\nupstream removed from its skip list for issue 99. No entry was added.\n\n## Testing\n\nFrom a fresh build directory, on the head of this branch:\n\n| Target | Tests | Failures |\n|---|---|---|\n| JVM | 1480 | 0 |\n| JS (Node) | 1455 | 0 |\n| Wasm (Node) | 1454 | 0 |\n\nJS and Wasm browser tests were run one commit earlier (1451 tests each,\n0 failures); the last commit only adds a KDoc sentence and common tests.\n`apiCheck` passes; the only new public API is\n`LoadSettings.allowNonScalarKeys`.\n\n**Native targets were not run locally** (no full Xcode on the machine\nused), so CI is the first place the new common tests run on native.\n\n## Follow-ups, not part of this PR\n\n- #478 is fixed by the issue 68 commit and can be closed.\n- `check-upstream.main.kts` still clones the Bitbucket repository on\n`master`; upstream moved to Codeberg.\n- Several older `ScannerException` call sites in `ScannerImpl` pass the\ncontext text as the problem and the other way round compared with\nupstream (same text, different line order in the message).\n- `ConstructYamlJsonFloat.constructFromString` is private here and\nprotected upstream, so it cannot be overridden the way upstream's issue\n79 test does.\n- Locally, a second Gradle invocation with a different task set removes\n`build/generated/ksp/metadata` (the generated `copy` DSL) and breaks\ncompilation until `build/` is deleted.\n\n---------\n\nCo-authored-by: Claude Opus 5.5 <noreply@anthropic.com>",
+          "timestamp": "2026-10-08T10:40:22+02:00",
+          "tree_id": "8332e316c5fe362e0d559a9bb7f623e2f80b358f",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/acc1391fa11189f396a16447cba15f63dc050c41"
+        },
+        "date": 1791449280142,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 12.589489979110562,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 20.120641194103975,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 13.106519311790738,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 85.28037197426971,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 85.6249622108225,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 42.221179255372576,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 51.24584570808081,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 30.927387177222545,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 76.70954494941176,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 66.1214929625545,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 97.09291576923077,
             "unit": "ms/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
