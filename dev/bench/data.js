@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1792862946777,
+  "lastUpdate": 1792880745229,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -34805,6 +34805,90 @@ window.BENCHMARK_DATA = {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 81.27987475409836,
             "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "1e525f0d555bab7aa4d13a7d3f458e1cb91e2718",
+          "message": "Update kotest to v6.2.6 (#742)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[io.kotest:kotest-runner-junit5](https://redirect.github.com/kotest/kotest)\n| `6.2.5` → `6.2.6` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-runner-junit5/6.2.6?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-runner-junit5/6.2.5/6.2.6?slim=true)\n|\n|\n[io.kotest:kotest-framework-plugin-gradle](https://redirect.github.com/kotest/kotest)\n| `6.2.5` → `6.2.6` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-plugin-gradle/6.2.6?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-plugin-gradle/6.2.5/6.2.6?slim=true)\n|\n|\n[io.kotest:kotest-assertions-table](https://redirect.github.com/kotest/kotest)\n| `6.2.5` → `6.2.6` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-table/6.2.6?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-table/6.2.5/6.2.6?slim=true)\n|\n|\n[io.kotest:kotest-assertions-core](https://redirect.github.com/kotest/kotest)\n| `6.2.5` → `6.2.6` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-core/6.2.6?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-core/6.2.5/6.2.6?slim=true)\n|\n|\n[io.kotest:kotest-framework-engine](https://redirect.github.com/kotest/kotest)\n| `6.2.5` → `6.2.6` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-engine/6.2.6?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-engine/6.2.5/6.2.6?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>kotest/kotest (io.kotest:kotest-runner-junit5)</summary>\n\n###\n[`v6.2.6`](https://redirect.github.com/kotest/kotest/releases/tag/v6.2.6)\n\n[Compare\nSource](https://redirect.github.com/kotest/kotest/compare/6.2.5...6.2.6)\n\n#### What's Changed\n\n- Bump kotest-skills plugin version to 6.2.5 by\n[@&#8203;github-actions](https://redirect.github.com/github-actions)\\[bot]\nin [#&#8203;6228](https://redirect.github.com/kotest/kotest/pull/6228)\n- fix(kotest-tests-timeout-project): Format timeout in exception message\nby [@&#8203;marcphilipp](https://redirect.github.com/marcphilipp) in\n[#&#8203;6230](https://redirect.github.com/kotest/kotest/pull/6230)\n- Fix outdated doc reference to kotlinx-datetime proptest artifact by\n[@&#8203;EdricChan03](https://redirect.github.com/EdricChan03) in\n[#&#8203;6233](https://redirect.github.com/kotest/kotest/pull/6233)\n- Expose kotestVersion on the Kotest Gradle plugin extension by\n[@&#8203;dlwhdgus0810](https://redirect.github.com/dlwhdgus0810) in\n[#&#8203;6238](https://redirect.github.com/kotest/kotest/pull/6238)\n- release gradle plugin along core deps for consistency by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6239](https://redirect.github.com/kotest/kotest/pull/6239)\n- propagate coroutine context via TestCoroutineInterceptor by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6240](https://redirect.github.com/kotest/kotest/pull/6240)\n- Remove kotlinx-io dependency from kotest-framework-engine by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;6245](https://redirect.github.com/kotest/kotest/pull/6245)\n- Report data class fields that hold different subtypes by\n[@&#8203;dlwhdgus0810](https://redirect.github.com/dlwhdgus0810) in\n[#&#8203;6242](https://redirect.github.com/kotest/kotest/pull/6242)\n- Fix dependency references in documentation for Kotest modules by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6248](https://redirect.github.com/kotest/kotest/pull/6248)\n- Return typed instance from class-based type assertions\n([#&#8203;6151](https://redirect.github.com/kotest/kotest/issues/6151))\nby [@&#8203;shayann07](https://redirect.github.com/shayann07) in\n[#&#8203;6243](https://redirect.github.com/kotest/kotest/pull/6243)\n- include kotestAssertionsJsoup in publishing by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6247](https://redirect.github.com/kotest/kotest/pull/6247)\n\n#### New Contributors\n\n-\n[@&#8203;github-actions](https://redirect.github.com/github-actions)\\[bot]\nmade their first contribution in\n[#&#8203;6228](https://redirect.github.com/kotest/kotest/pull/6228)\n- [@&#8203;EdricChan03](https://redirect.github.com/EdricChan03) made\ntheir first contribution in\n[#&#8203;6233](https://redirect.github.com/kotest/kotest/pull/6233)\n- [@&#8203;dlwhdgus0810](https://redirect.github.com/dlwhdgus0810) made\ntheir first contribution in\n[#&#8203;6238](https://redirect.github.com/kotest/kotest/pull/6238)\n- [@&#8203;shayann07](https://redirect.github.com/shayann07) made their\nfirst contribution in\n[#&#8203;6243](https://redirect.github.com/kotest/kotest/pull/6243)\n\n**Full Changelog**:\n<https://github.com/kotest/kotest/compare/6.2.5...v6.2.6>\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0NC4xNTYuMyIsInVwZGF0ZWRJblZlciI6IjQ0LjE1Ni4zIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-10-24T22:18:18Z",
+          "tree_id": "65882ba3fc0250f4c277bba32ba74e8a0ac6ddb5",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/1e525f0d555bab7aa4d13a7d3f458e1cb91e2718"
+        },
+        "date": 1792880744745,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 116.2007779911639,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 101.94405087187499,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 20.762067617963087,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 24.412669889140453,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 18.31783946706039,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 56.28821206543968,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 61.58385786410257,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 35.231614812758444,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 50.15213254777778,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 52.397321094662026,
+            "unit": "us/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
