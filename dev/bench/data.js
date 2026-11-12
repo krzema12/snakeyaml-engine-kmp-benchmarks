@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1794454851893,
+  "lastUpdate": 1794523383262,
   "repoUrl": "https://github.com/krzema12/snakeyaml-engine-kmp",
   "entries": {
     "SnakeKMP benchmarks": [
@@ -35159,6 +35159,90 @@ window.BENCHMARK_DATA = {
             "name": "mingwX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data\\\\issues\\\\kmp-issue-204-OpenAI-API.yaml\"} )",
             "value": 93.4267924,
             "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f7a9effa3ba6fbaa4463adc7aac30ea061f4976e",
+          "message": "Update kotest to v6.2.7 (#751)\n\nThis PR contains the following updates:\n\n| Package | Change |\n[Age](https://docs.renovatebot.com/merge-confidence/) |\n[Confidence](https://docs.renovatebot.com/merge-confidence/) |\n|---|---|---|---|\n|\n[io.kotest:kotest-runner-junit5](https://redirect.github.com/kotest/kotest)\n| `6.2.6` → `6.2.7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-runner-junit5/6.2.7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-runner-junit5/6.2.6/6.2.7?slim=true)\n|\n|\n[io.kotest:kotest-framework-plugin-gradle](https://redirect.github.com/kotest/kotest)\n| `6.2.6` → `6.2.7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-plugin-gradle/6.2.7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-plugin-gradle/6.2.6/6.2.7?slim=true)\n|\n|\n[io.kotest:kotest-assertions-table](https://redirect.github.com/kotest/kotest)\n| `6.2.6` → `6.2.7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-table/6.2.7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-table/6.2.6/6.2.7?slim=true)\n|\n|\n[io.kotest:kotest-assertions-core](https://redirect.github.com/kotest/kotest)\n| `6.2.6` → `6.2.7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-assertions-core/6.2.7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-assertions-core/6.2.6/6.2.7?slim=true)\n|\n|\n[io.kotest:kotest-framework-engine](https://redirect.github.com/kotest/kotest)\n| `6.2.6` → `6.2.7` |\n![age](https://developer.mend.io/api/mc/badges/age/maven/io.kotest:kotest-framework-engine/6.2.7?slim=true)\n|\n![confidence](https://developer.mend.io/api/mc/badges/confidence/maven/io.kotest:kotest-framework-engine/6.2.6/6.2.7?slim=true)\n|\n\n---\n\n> [!WARNING]\n> Some dependencies could not be looked up. Check the [Dependency\nDashboard](../issues/74) for more information.\n\n---\n\n### Release Notes\n\n<details>\n<summary>kotest/kotest (io.kotest:kotest-runner-junit5)</summary>\n\n###\n[`v6.2.7`](https://redirect.github.com/kotest/kotest/releases/tag/v6.2.7)\n\n#### What's Changed\n\n- attempt to use the element module to choose project path in IJ runner\nby\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6249](https://redirect.github.com/kotest/kotest/pull/6249)\n- remove usage of internal API for IJ plugin and add a verify step to\navoid this in future by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6250](https://redirect.github.com/kotest/kotest/pull/6250)\n- Keep the original error as the cause of a failed permutation by\n[@&#8203;ItsDeadlyProgrammer](https://redirect.github.com/ItsDeadlyProgrammer)\nin [#&#8203;6251](https://redirect.github.com/kotest/kotest/pull/6251)\n- improve ai skills and make coroutines-test part of api by\n[@&#8203;alfonsoristorato](https://redirect.github.com/alfonsoristorato)\nin [#&#8203;6253](https://redirect.github.com/kotest/kotest/pull/6253)\n- Report a spec that fails outside its tests to pitest by\n[@&#8203;ItsDeadlyProgrammer](https://redirect.github.com/ItsDeadlyProgrammer)\nin [#&#8203;6255](https://redirect.github.com/kotest/kotest/pull/6255)\n- Call PropTestListeners around every shrink run by\n[@&#8203;ybai08](https://redirect.github.com/ybai08) in\n[#&#8203;6252](https://redirect.github.com/kotest/kotest/pull/6252)\n- Expose HikariCP as an api dependency of\nkotest-extensions-testcontainers by\n[@&#8203;PreAgile](https://redirect.github.com/PreAgile) in\n[#&#8203;6259](https://redirect.github.com/kotest/kotest/pull/6259)\n- perf: short-circuit the contain matcher pass/fail decision\n([#&#8203;6106](https://redirect.github.com/kotest/kotest/issues/6106))\nby [@&#8203;Inf1mum](https://redirect.github.com/Inf1mum) in\n[#&#8203;6260](https://redirect.github.com/kotest/kotest/pull/6260)\n- Keep Gradle's no-discovered-tests check enabled on the JVM\n([#&#8203;6257](https://redirect.github.com/kotest/kotest/issues/6257))\nby [@&#8203;Inf1mum](https://redirect.github.com/Inf1mum) in\n[#&#8203;6261](https://redirect.github.com/kotest/kotest/pull/6261)\n- Add shouldHaveConcreteType alias for shouldBeTypeOf by\n[@&#8203;Obrams](https://redirect.github.com/Obrams) in\n[#&#8203;6256](https://redirect.github.com/kotest/kotest/pull/6256)\n- docs: add Vercel skills CLI installation instructions by\n[@&#8203;alyssoncs](https://redirect.github.com/alyssoncs) in\n[#&#8203;6269](https://redirect.github.com/kotest/kotest/pull/6269)\n- Restore compatibility with Gradle 9.9.0 by\n[@&#8203;marcphilipp](https://redirect.github.com/marcphilipp) in\n[#&#8203;6271](https://redirect.github.com/kotest/kotest/pull/6271)\n- Support com.android.kotlin.multiplatform.library in the Gradle plugin\n([#&#8203;6132](https://redirect.github.com/kotest/kotest/issues/6132))\nby [@&#8203;Inf1mum](https://redirect.github.com/Inf1mum) in\n[#&#8203;6266](https://redirect.github.com/kotest/kotest/pull/6266)\n- Update build.gradle.kts to fix gradle plugin label by\n[@&#8203;sksamuel](https://redirect.github.com/sksamuel) in\n[#&#8203;6273](https://redirect.github.com/kotest/kotest/pull/6273)\n\n#### New Contributors\n\n-\n[@&#8203;ItsDeadlyProgrammer](https://redirect.github.com/ItsDeadlyProgrammer)\nmade their first contribution in\n[#&#8203;6251](https://redirect.github.com/kotest/kotest/pull/6251)\n- [@&#8203;ybai08](https://redirect.github.com/ybai08) made their first\ncontribution in\n[#&#8203;6252](https://redirect.github.com/kotest/kotest/pull/6252)\n- [@&#8203;Inf1mum](https://redirect.github.com/Inf1mum) made their\nfirst contribution in\n[#&#8203;6260](https://redirect.github.com/kotest/kotest/pull/6260)\n- [@&#8203;Obrams](https://redirect.github.com/Obrams) made their first\ncontribution in\n[#&#8203;6256](https://redirect.github.com/kotest/kotest/pull/6256)\n- [@&#8203;alyssoncs](https://redirect.github.com/alyssoncs) made their\nfirst contribution in\n[#&#8203;6269](https://redirect.github.com/kotest/kotest/pull/6269)\n\n**Full Changelog**:\n<https://github.com/kotest/kotest/compare/v6.2.6...v6.2.7>\n\n</details>\n\n---\n\n### Configuration\n\n📅 **Schedule**: (UTC)\n\n- Branch creation\n  - At any time (no schedule defined)\n- Automerge\n  - At any time (no schedule defined)\n\n🚦 **Automerge**: Enabled.\n\n♻ **Rebasing**: Whenever PR is behind base branch, or you tick the\nrebase/retry checkbox.\n\n🔕 **Ignore**: Close this PR and you won't be reminded about these\nupdates again.\n\n---\n\n- [ ] <!-- rebase-check -->If you want to rebase/retry this PR, check\nthis box\n\n---\n\nThis PR was generated by [Mend Renovate](https://mend.io/renovate/).\nView the [repository job\nlog](https://developer.mend.io/github/krzema12/snakeyaml-engine-kmp).\n\n<!--renovate-debug:eyJjcmVhdGVkSW5WZXIiOiI0NC4yMjguMCIsInVwZGF0ZWRJblZlciI6IjQ0LjIyOC4wIiwidGFyZ2V0QnJhbmNoIjoibWFpbiIsImxhYmVscyI6W119-->\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",
+          "timestamp": "2026-11-12T22:33:35Z",
+          "tree_id": "44ca34062fa83e75bd479134c43677968468a5b7",
+          "url": "https://github.com/krzema12/snakeyaml-engine-kmp/commit/f7a9effa3ba6fbaa4463adc7aac30ea061f4976e"
+        },
+        "date": 1794523382881,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "macosArm64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 65.1671932763401,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "macosArm64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 102.55529916857142,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 31.712237458009838,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "linuxX64.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 44.83215125980392,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "jvm.DumpBenchmark.dumpMapWithAllTypes",
+            "value": 10.519215047964028,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 15.855863366727013,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "jvm.SnakeyamlEngineJvmLoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 10.72101146111257,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: 1\nthreads: 1"
+          },
+          {
+            "name": "js.LoadingTimeBenchmark.loadsOpenAiSchema ( {\"openAiYamlPath\":\"data/issues/kmp-issue-204-OpenAI-API.yaml\"} )",
+            "value": 72.39681811948724,
+            "unit": "ms/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "js.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 55.30304581264213,
+            "unit": "us/op",
+            "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
+          },
+          {
+            "name": "mingwX64.DumpBenchmark.dumpMapWithAllTypes ( {} )",
+            "value": 52.04518257026874,
+            "unit": "us/op",
             "extra": "iterations: 10\nforks: undefined\nthreads: undefined"
           }
         ]
